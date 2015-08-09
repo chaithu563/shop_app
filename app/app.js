@@ -9,22 +9,21 @@ underscore.factory('_', function () {
 angular.module('myApp', [
   'ui.router',
   'myApp.view1',
-  'myApp.view2',
-  'myApp.datepic1',
-   'myApp.datagrid',
-    'myApp.nview',
    'myApp.service',
-  'myApp.version',
   'ui.bootstrap',
    'underscore',
    'ngResource',
-   'myApp.directives',
-   'ui.grid'
+   'myApp.directives'
 ]).
+
 config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/datagrid');
-    //$stateProvider.otherwise({ redirectTo: '/view1' });
-
+    $urlRouterProvider.otherwise('/home');
+    $stateProvider
+      .state('home', {
+          url: '/home',
+          templateUrl: 'view1/view1.html',
+          controller: 'View1Ctrl'
+      })
 
 }]);

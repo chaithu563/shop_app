@@ -1,11 +1,32 @@
-<p class="mytext">This is the partial for view 1.</p>
 
-<input type="submit" ng-click="fn1()" name="click" />
+<div>
+    <p class="mytext">Selecte Items to shop by clicking book button.</p>
+    <input type="submit" value="Choose Items" ng-click="ShowItemsAvail()" style="height: 33px" />
+</div>
+<br />
 
-<h1>My Directive </h1>
+<div id="wrap_video">
 
-<my-grid options="gridOptions1" data="gridData">  </my-grid>
+<div id="video_box">
+    <div id="video_overlays" ng-show="isVisible">
+         <ul ng-repeat="item in availItems">
+          <li>  <img ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src={{item.imgURL}} alt="" /></li>
+        </ul>
+    </div>
+   
+    <div>
+      <!--  <video id="MyVideo1" onplay="vidplay()" controls >
+        <source src="http://localhost/shop/video/sreemanthudu.mp4" type="video/mp4">
+        </video>-->
 
-<h1> UI-GRID directive</h1>
-<div class="grid" ui-grid="gridOptions" ui-grid-move-columns></div>
+       <video id="MyVideo1" data-no-fullscreen="true"  controls >
+          <source  src="http://localhost/shop/video/sreemanthudu.mp4">
+
+       </video>
+    </div>
+</div>
+    
+</div>
+
+
 
