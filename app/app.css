@@ -1,26 +1,64 @@
 /* app css stylesheet */
+/*header css*/
 
-
-#video_box{
-    float:left;
+.headermain {
+    height: 50px;
+    width: 100%;
+    background-color: #4e7dd1;
+    overflow: hidden;
 }
-#MyVideo1{
 
-   width: 674px; 
-   height: 340px
-}
-#itemImg{
-    width: 67px; 
-   height: 34px
 
+.headerimg {
+    margin: 10px;
+    float: left;
+    height: 70%;
+    width: 7%;
 }
+
+.headermain span {
+    margin: 10px;
+    font-size: 20px;
+    float: right;
+    color: white;
+}
+
+
+/*video content*/
+.videocontent {
+    position: relative;
+    margin: auto;
+    margin-left: 15%;
+}
+
+.shopimg{
+    margin-bottom:5px;
+    width:3%;
+    height:3%;
+}
+
+#video_box {
+    float: left;
+}
+
+#MyVideo1 {
+    width: 674px;
+    height: 340px;
+}
+
+#itemImg {
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
 #video_overlays {
     /*margin-top:2%;*/
-position:absolute;
-float:left;
-    width:620px;
-    min-height:300px;
+    position: absolute;
+    float: left;
+    width: 620px;
+    min-height: 300px;
     /*background-color:#808080;*/
     opacity: 1;
-    z-index:2;
+    z-index: 2;
 }

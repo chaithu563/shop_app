@@ -12,11 +12,12 @@
     <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-    <ul class="menu">
-        <li><a href="#/home">My Video</a></li> 
-    </ul>
-
-
+   
+    <div class="headermain">
+           <img src="http://localhost/shop/img/shop_header.png" class="headerimg" alt="Site Logo" />
+            <span>Hello! Chaitanya </span>
+    </div>
+ 
     <div ui-view></div>
 
    
@@ -29,6 +30,7 @@
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="shop_route.js"></script>
+    <script src="directives/header/header.js"></script>
     <script src="directives/dataGridDir/dataGridDir.js"></script>
     <script src="services/dataServices.js"></script>
     <script src="app.js"></script>
