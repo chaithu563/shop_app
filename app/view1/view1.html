@@ -1,33 +1,44 @@
 <div class="videocontent">
 
-<div>
-    <p class="mytext">Selecte Items to shop by clicking book button.</p>
-    <!--<input type="submit" value="Choose Items" ng-click="ShowItemsAvail()" style="height: 33px" />-->
+    <!--<div id="wrap_search">
+     <dropdown-search id="searchvideo" placeholder="Search Movies For Shopping" pause="100" selectedobject="selectedVideo" localdata="videos" searchfields="name" titlefield="name" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" />
+</div>-->
 
-</div>
-<br />
-
-<div id="wrap_video">
-
-<div id="video_box">
-    <div id="video_overlays" ng-show="isVisible">
-         <ul ng-repeat="item in availItems">
-          <li>  <img ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src={{item.imgURL}} alt="" /></li>
-        </ul>
+    <div class="slideImagesDiv">
     </div>
-   
-    <div>
-        <img class="shopimg" title="select Item" src="../app/img/shop_icon.png" ng-click="ShowItemsAvail()" alt="" />
-        <video id="MyVideo1" controls >
-        <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
-        </video>
-        
-    </div>
-</div>
-    
-</div>
+    <br />
 
- </div>
+    <div id="wrap_video">
+
+        <div id="video_box">
+            <div id="video_overlays" ng-show="isVisible">
+                <ul ng-repeat="item in availItems">
+                    <li>
+                        <img ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="{{item.imgURL}}" alt="" /></li>
+                </ul>
+            </div>
+
+            <div>
+                
+                <video id="MyVideo1" >
+                    <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
+                </video>
+                <div id="video-controls">
+                    <img class="shopimg" title="select Item" src="../app/img/shop_icon.png" ng-click="ShowItemsAvail()" alt="" />
+                    <button type="button" id="play-pause">Play</button>
+                    <input type="range" id="seek-bar" value="0">
+                    <button type="button" id="mute">Mute</button>
+                    <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+                   <!-- <button type="button" id="full-screen">Full-Screen</button>-->
+                     <img id="full-screen" title="Full screen" src="../app/img/FullScreen.png" class="shopimg" alt="" />
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 
 
