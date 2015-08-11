@@ -55,8 +55,8 @@
     background-image: url(../app/img/back.jpg);
 }
 #wrap_video{
-    margin-left:20%;
-    margin-right:20%;
+    margin-left:30%;
+    margin-right:30%;
 }
 
 /*video control*/
@@ -155,4 +155,10 @@ button:hover {
     /*background-color:#808080;*/
     opacity: 1;
     z-index: 2;
+}
+
+
+	#video_overlays .ul
+{
+    list-style-type: none;
 }
