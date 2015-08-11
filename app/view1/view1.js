@@ -104,6 +104,7 @@ angular.module('myApp.view1', ['ui.router'])
         // Video
         var video = document.getElementById("MyVideo1");
 
+   // $scope.play-pause-class="";
         // Buttons
         var playButton = document.getElementById("play-pause");
         var muteButton = document.getElementById("mute");
