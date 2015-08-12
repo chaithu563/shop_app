@@ -119,8 +119,8 @@ button {
 .video_overlays {
 	/*margin-top:2%;*/
 	position: absolute;
-	float: left;
-	width: 80%;
+	/*float: left;*/
+	width: 50%;
 	min-height: 300px;
 	/*background-color:#808080;*/
 	opacity: 1;
@@ -129,17 +129,42 @@ button {
 
 
 
-#itemImg {
-	width: 40px;
-	height: 40px;
-	float: right;
-	margin-left: 2%;
-}
+
 
 .video_overlays ul {
 	list-style-type: none;
 }
 
 .video_overlays li {
-	margin-left: 1%;
+	margin-left: 3%;
+}
+
+
+.video_overlays ul li {
+    /*display: inline;*/
+    height: 100px;
+    line-height: 100px;
+
+	 display: inline;
+    float: right;
+    text-align: center;
+}
+
+.video_overlays ul li img {
+    -align: middle;
+	width:100px;
+	height:100px;
+}
+
+.video_overlays ul li img:hover {
+    /*-align: middle;*/
+	width:200px;
+	height:200px;
+	cursor:pointer;
+}
+#itemImg {
+	/*width: 40px;
+	height: 40px;
+	float: right;
+	margin-left: 2%;*/
 }

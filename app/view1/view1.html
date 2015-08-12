@@ -15,9 +15,9 @@
 
 		<div>
 			<div class="video_overlays" ng-show="isVisible">
-				<ul ng-repeat="item in availItems">
-					<li>
-						<img ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="{{item.imgURL}}" alt="" />
+				<ul>
+					<li ng-repeat="item in availItems">
+						<img  ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="{{item.imgURL}}" alt="" />
 					</li>
 				</ul>
 			</div>
