@@ -45,9 +45,10 @@
 
 /*video content*/
 .videocontent {
+    /*overflow: scroll;*/
     position: absolute;
     bottom:0px;
-    top:52px;
+    top:60px;;
     display:block;
     width:100%;
     background-image: url(../app/img/back.jpg);
@@ -104,22 +105,28 @@ button:hover {
 }
 
 #seek-bar {
-	width: 68%;
+	width: 65%;
 }
 
 #volume-bar {
 	width:10%;
 }
+#seek-time
+{
+    width:3%;
+}
 
 
 
 
 
 
-.shopimg{
+
+.controlimg{
     /*margin-bottom:5px;*/
     width:3%;
     height:3%;
+    margin-left:2%;
 }
 
 #video_box {

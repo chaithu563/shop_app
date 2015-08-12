@@ -103,14 +103,16 @@ angular.module('myApp.view1', ['ui.router'])
     //video control
         // Video
         var video = document.getElementById("MyVideo1");
-
-   // $scope.play-pause-class="";
+        video.play();
+        $scope.playorpause = "pause";
+        $scope.muteorunmute = "speaker-on";
         // Buttons
         var playButton = document.getElementById("play-pause");
         var muteButton = document.getElementById("mute");
         var fullScreenButton = document.getElementById("full-screen");
 
-        // Sliders
+    // Sliders
+        var seektime=document.getElementById("seek-time");
         var seekBar = document.getElementById("seek-bar");
         var volumeBar = document.getElementById("volume-bar");
 
@@ -120,16 +122,17 @@ angular.module('myApp.view1', ['ui.router'])
             if (video.paused == true) {
                 // Play the video
                 video.play();
-
+                $scope.playorpause = "pause";
                 // Update the button text to 'Pause'
-                playButton.innerHTML = "Pause";
+              //  playButton.innerHTML = "Pause";
             } else {
                 // Pause the video
                 video.pause();
-
+                $scope.playorpause = "play";
                 // Update the button text to 'Play'
-                playButton.innerHTML = "Play";
+               // playButton.innerHTML = "Play";
             }
+            $scope.$apply();
         });
 
         document.getElementById("MyVideo1").onplaying = function () {
@@ -138,8 +141,9 @@ angular.module('myApp.view1', ['ui.router'])
         };
         $scope.ShowItemsAvail = function (item) {
             video.pause();
+            $scope.playorpause = "play";
             // Update the button text to 'Play'
-            playButton.innerHTML = "Play";
+          //  playButton.innerHTML = "Play";
             $scope.availItems = getAvailableItems();
             $scope.isVisible = true;
         }
@@ -152,14 +156,18 @@ angular.module('myApp.view1', ['ui.router'])
                 video.muted = true;
 
                 // Update the button text
-                muteButton.innerHTML = "Unmute";
+                // muteButton.innerHTML = "Unmute";
+                $scope.muteorunmute = "mute";
             } else {
                 // Unmute the video
                 video.muted = false;
 
                 // Update the button text
-                muteButton.innerHTML = "Mute";
+                //muteButton.innerHTML = "Mute";
+                $scope.muteorunmute = "speaker-on";
             }
+
+            $scope.$apply();
         });
 
 
@@ -182,6 +190,7 @@ angular.module('myApp.view1', ['ui.router'])
 
             // Update the video time
             video.currentTime = time;
+           
         });
 
 
@@ -192,6 +201,7 @@ angular.module('myApp.view1', ['ui.router'])
 
             // Update the slider value
             seekBar.value = value;
+            seektime.textContent = Math.floor(video.currentTime);
         });
 
         // Pause the video when the seek handle is being dragged
@@ -209,5 +219,6 @@ angular.module('myApp.view1', ['ui.router'])
             // Update the video volume
             video.volume = volumeBar.value;
         });
+        $scope.$apply();
 
 }]);
