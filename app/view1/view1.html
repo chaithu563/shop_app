@@ -17,14 +17,18 @@
 			<div class="video_overlays" ng-show="isVisible">
 				<ul>
 					<li ng-repeat="item in availItems">
-						<img  ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="{{item.imgURL}}" alt="" />
+                       <!-- ng-mouseleave="isPriceVisible=0" -->
+						<img ng-mouseleave="isPriceVisible=0" ng-mouseover="isPriceVisible=1" ng-init="isPriceVisible=0" ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="{{item.imgURL}}" alt="" />
+                        <div class="price" ng-show="isPriceVisible">
+                          <span style="margin-bottom:2px;  font-family:'Comic Sans MS' ;font-size:12px">{{ item.price }}</span>  <img id="rupee" class="shoprupee" src="../app/img/indian-rupee.png" />
+                        </div>
 					</li>
 				</ul>
 			</div>
 
 			<div>
 
-				<video id="MyVideo1">
+				<video id="MyVideo1"  class="opacity-{{opacityinorout}}">
 					<source src="../app/video/sreemanthudu.mp4" type="video/mp4">
 				</video>
 				<div id="video-controls">
