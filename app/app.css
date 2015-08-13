@@ -187,23 +187,25 @@ button {
 
 .listVideo{
 	width:100%;
+    margin-left:10%;
+    margin-right:6%;
 }
 .listVideo ul li{
 display:inline;
-width:13%;
-height:15%;
-float: left;
-margin-left:5%;
+
 }
 .listVideo ul{
 	list-style-type: none;
 }
 
 .listVideo img{
-  border: 0 none;
-  display: inline-block;
-  height: 150px;
-  max-width: 100%;
+  /*border: 0 none;*/
+  /*display: inline-block;*/
+  max-height: 10%;
+  border-radius: 10px; 
+  -moz-border-radius: 10px; 
+  
+  width:12%;
   vertical-align: middle;
   margin-left:2%;
   border:1px;
@@ -211,9 +213,11 @@ margin-left:5%;
 }
 
 .listVideo img:hover{
- height: 170px;
+  max-height: 13%;
  border-radius: 10px; 
+  -moz-border-radius: 10px; 
  padding:1px;
- border:1px solid black;
+ border:1.2px solid black;
  cursor:pointer;
+  width:14%;
 }
