@@ -12,7 +12,7 @@ angular.module('myApp.view1', ['ui.router'])
 	var chairItem = "http://www.snapdeal.com/product/divano-modular-black-metal-office/1301325749";
 	var cupItem = "http://www.amazon.com/Stainless-Steel-Sauce-Condiment-Cups/dp/B000K9WTN2";
 	var shirtItem = "http://www.amazon.com/Russell-Athletic-Basic-T-Shirt-XXX-Large/dp/B00076ZRC8/ref=sr_1_1?ie=UTF8&qid=1439295413&sr=8-1&keywords=t+shirt";
-	var shirtItem = "http://www.amazon.com/Russell-Athletic-Basic-T-Shirt-XXX-Large/dp/B00076ZRC8/ref=sr_1_1?ie=UTF8&qid=1439295413&sr=8-1&keywords=t+shirt";
+	//var shirtItem = "http://www.amazon.com/Russell-Athletic-Basic-T-Shirt-XXX-Large/dp/B00076ZRC8/ref=sr_1_1?ie=UTF8&qid=1439295413&sr=8-1&keywords=t+shirt";
 	var mentradItem = "http://shopping.indiatimes.com/fashion/ethnic-wear/bodyline-cream-men-kurta-pyjama-rk4028/43969/p_B2697112";
 	var spectItem = "http://www.lenskart.com/vincent-chase-vc-0315-gunmetal-grey-black-doy2-eyeglasses.html";
 	var wallDocrItem = "http://www.snapdeal.com/product/aquire-pvc-wall-stickers/638522664252";
@@ -27,14 +27,15 @@ angular.module('myApp.view1', ['ui.router'])
 	var sofaItem = "http://www.pepperfry.com/alia-modular-sofa-sectional-2-corner-1-1-seater-in-black-colour-by-furny-1266366.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vWhWI0z1DJUoHdqta2jwDgAyQ7CT57_tWcL39HtnMGIaAsSC8P8HAQ";
 	var bhudhaItem = "http://www.at-home.co.in/decor/olive-buddha-face-showpiece-home-nilkamal/p-7273534-52917894305-cat.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vd-pQ-1BZZyUhTHDjEwJeV8Np0zIftUaRrbl0l3yjvgaAkrE8P8HAQ";
 	var sareeItem = "http://www.jabong.com/Ambica-Green-Printed-Saree-1519170.html?pos=65";
+	var earringItem = "http://www.snapdeal.com/product/shinningdiva-aashiqui-2-earrings-in/516664782?utm_source=earth_feed&utm_campaign=6_341&utm_medium=102426941&vendorCode=S82cc7";
 
 	var items = [
                 { id: 1, name: "Blazer", ST: 11, ET: 13, imgURL: "http://www.saymoontailors.com/uploads/21.jpg", redURL: blazerItem, price: 10000 },
                 { id: 2, name: "Cap", ST: 39, ET: 40, imgURL: "http://www.volkl.com/uploads/tx_voelkldata/fashion/VolklLogoCap_BLK_L_01.png", redURL: capItem, price: 1000 },
                 { id: 3, name: "car", ST: 86, ET: 87, imgURL: "http://cdn.wonderfulengineering.com/wp-content/uploads/2013/11/bmw-cars-picture.jpg", redURL: carItem, price: 1000000 },
-                { id: 4, name: "Dinning", ST: 35, ET: 40, imgURL: "http://i1.pepperfry.com/media/catalog/product/t/w/800x880/two-seater-dining-set-in-white-colour-by-ventura-two-seater-dining-set-in-white-colour-by-ventura-mpm4hn.jpg", redURL: DiningItem, price: 19000 },
-                { id: 5, name: "cycle", ST: 118, ET: 145, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 20000 },
-				{ id: 6, name: "cycle", ST: 7, ET: 10, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 20000 },
+                { id: 4, name: "Dinning", ST: 36, ET: 40, imgURL: "http://i1.pepperfry.com/media/catalog/product/t/w/800x880/two-seater-dining-set-in-white-colour-by-ventura-two-seater-dining-set-in-white-colour-by-ventura-mpm4hn.jpg", redURL: DiningItem, price: 19000 },
+                { id: 5, name: "cycle", ST: 118, ET: 145, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 22000 },
+				{ id: 6, name: "cycle", ST: 7, ET: 10, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 29000 },
 				{ id: 7, name: "Car", ST: 11, ET: 13, imgURL: "http://cdn.wonderfulengineering.com/wp-content/uploads/2013/11/bmw-cars-picture.jpg", redURL: carItem, price: 1000000 },
 			    { id: 8, name: "Glass", ST: 11, ET: 15, imgURL: "http://mat2.materialicious.com/images/glass-houses-showcase-a-line-of-glass-furniture-o.jpg", redURL: glassItem, price: 10000 },
 				 { id: 9, name: "Table", ST: 14, ET: 15, imgURL: "http://i1.pepperfry.com/media/catalog/product/n/i/800x880/nilkamal-executive-acacia-computer-table-nilkamal-executive-acacia-computer-table-wrgfqj.jpg", redURL: tableItem, price: 3000 },
@@ -42,7 +43,7 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 11, name: "Table", ST: 18, ET: 24, imgURL: "http://i1.pepperfry.com/media/catalog/product/t/w/800x880/two-seater-dining-set-in-white-colour-by-ventura-two-seater-dining-set-in-white-colour-by-ventura-mpm4hn.jpg", redURL: tableItem, price: 1000 },
 				 { id: 12, name: "Chair", ST: 18, ET: 24, imgURL: "http://johnlewis.scene7.com/is/image/JohnLewis/233166328alt1?$prod_exlrg$", redURL: chairItem, price: 1000 },
 				 { id: 13, name: "Cup", ST: 18, ET: 24, imgURL: "http://images.wisegeek.com/cup-of-white-sauce.jpg", redURL: cupItem, price: 1000 },
-				 { id: 14, name: "Cup", ST: 35, ET: 40, imgURL: "http://images.wisegeek.com/cup-of-white-sauce.jpg", redURL: cupItem, price: 1000 },
+				 { id: 14, name: "Cup", ST: 36, ET: 40, imgURL: "http://images.wisegeek.com/cup-of-white-sauce.jpg", redURL: cupItem, price: 1000 },
 				 { id: 15, name: "Shirt", ST: 42, ET: 56, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1000 },
 				 { id: 16, name: "Shirt", ST: 73, ET: 82, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1100 },
 				 { id: 17, name: "Shirt", ST: 18, ET: 24, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1200 },
@@ -51,7 +52,7 @@ angular.module('myApp.view1', ['ui.router'])
                  { id: 20, name: "Spectales", ST: 18, ET: 21, imgURL: "http://www.firmoo.com/frame-images/1364/middle-unisex-plastic-eyeglasses-6485.png", redURL: spectItem, price: 1300 },
                  { id: 21, name: "Shirt", ST: 39, ET: 41, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 },
                  { id: 22, name: "Wall Decoration", ST: 35, ET: 37, imgURL: "http://bestinspired.com/wp-content/uploads/2015/04/Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
-				 { id: 23, name: "Ladies Dress", ST: 35, ET: 37, imgURL: "http://i01.i.aliimg.com/wsphoto/v6/543883757_1/Spring-2014-New-Brand-Dress-Little-Black-Dress-Fashion-Chiffon-Mini-Women-s-Ladies-Party-Sexy.jpg", redURL: ladiesDressItem1, price: 3000 },
+				 { id: 23, name: "Ladies Dress", ST: 36, ET: 37, imgURL: "http://i01.i.aliimg.com/wsphoto/v6/543883757_1/Spring-2014-New-Brand-Dress-Little-Black-Dress-Fashion-Chiffon-Mini-Women-s-Ladies-Party-Sexy.jpg", redURL: ladiesDressItem1, price: 3000 },
 				 { id: 24, name: "Shirt", ST: 35, ET: 37, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1000 },
 				 { id: 25, name: "ladies Dress", ST: 42, ET: 44, imgURL: "http://www.jabong.com/blog/wp-content/uploads/2015/07/holding8.jpg", redURL: ladiesDressItem1, price: 1090 },
 				 { id: 26, name: "ladies Dress", ST: 42, ET: 44, imgURL: "http://clothing9.in/wp-content/uploads/2015/04/Punjabi-Salwar-Kameez-Dresses-Design-2015-16-For-Modern-Girls-3.jpg", redURL: ladiesDressItem1, price: 1200 },
@@ -68,9 +69,12 @@ angular.module('myApp.view1', ['ui.router'])
 			     { id: 37, name: "Bhudha", ST: 77, ET: 82, imgURL: "http://www.santosha.com/assets/images/teracotta_buddha.jpg", redURL: bhudhaItem, price: 4500 },
 				 { id: 38, name: "Saree", ST: 109, ET: 115, imgURL: "https://www.expatads.com/adpics1/2013/8/online-saree-shopping-online-shopping-wedding-sarees-and-apparel-shopping-saree521f03a39961fb974620.jpg", redURL: sareeItem, price: 4500 },
 				 { id: 39, name: "Shirt", ST: 109, ET: 115, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 },
+				 { id: 40, name: "ladies Ear Ring", ST: 45, ET: 51, imgURL: "http://i01.i.aliimg.com/wsphoto/v0/1966713769_1/Shell-natural-Pearl-Earrings-Ladies-Long-Earring-18K-gold-plated-with-Cubic-zircon-new-designer-flower.jpg", redURL: earringItem, price: 19000 },
+				 { id: 41, name: "Shirt", ST: 94, ET: 96, imgURL: "https://www.blueinc.co.uk/images/mens-red-marl-plain-t-shirt-p19002-15536_zoom.jpg", redURL: shirtItem, price: 1900 },
+				  { id: 39, name: "Shirt", ST: 118, ET: 145, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 }
+				   
+
 					
-
-
 
 	];
 
