@@ -7,3 +7,22 @@ http://futurebrightsolar.com:8880/smb/file-manager/list?currentDir=/%2Fhttpdocs
 http://futurebrightsolar.com:8880/smb/file-manager/list
 gayamrahu@gmail.com
 Gayma@123
+
+
+notes
+
+1) choose Buttons  (https://thenounproject.com/search/?q=shop)
+2) Application NAme(
+3) video control tab
+http://blog.teamtreehouse.com/building-custom-controls-for-html5-videos
+4) image purchase tag in video tag  control abov e
+
+5) background image
+6) right side videos(not required)
+7)http://www.hotstar.com/#!/featured 
+8) change images as above
+9)timings match more items
+
+
+-----------------------
+1)http://www.iconsdb.com/custom-color/cart-icons.html    (#0371A8) shop play
