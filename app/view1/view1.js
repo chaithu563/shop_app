@@ -30,48 +30,48 @@ angular.module('myApp.view1', ['ui.router'])
 	var earringItem = "http://www.snapdeal.com/product/shinningdiva-aashiqui-2-earrings-in/516664782?utm_source=earth_feed&utm_campaign=6_341&utm_medium=102426941&vendorCode=S82cc7";
 
 	var items = [
-                { id: 1, name: "Blazer", ST: 11, ET: 13, imgURL: "http://www.saymoontailors.com/uploads/21.jpg", redURL: blazerItem, price: 10000 },
-                { id: 2, name: "Cap", ST: 39, ET: 40, imgURL: "http://www.volkl.com/uploads/tx_voelkldata/fashion/VolklLogoCap_BLK_L_01.png", redURL: capItem, price: 1000 },
-                { id: 3, name: "car", ST: 86, ET: 87, imgURL: "http://cdn.wonderfulengineering.com/wp-content/uploads/2013/11/bmw-cars-picture.jpg", redURL: carItem, price: 1000000 },
-                { id: 4, name: "Dinning", ST: 36, ET: 40, imgURL: "http://i1.pepperfry.com/media/catalog/product/t/w/800x880/two-seater-dining-set-in-white-colour-by-ventura-two-seater-dining-set-in-white-colour-by-ventura-mpm4hn.jpg", redURL: DiningItem, price: 19000 },
-                { id: 5, name: "cycle", ST: 118, ET: 145, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 22000 },
-				{ id: 6, name: "cycle", ST: 7, ET: 10, imgURL: "http://imshopping.rediff.com/imgshop/800-1280/shopping/pixs/18320/c/cycle_54a3b8fe76041._hero-electric-avior-amx-electric-cycle.jpg", redURL: CycleItem, price: 29000 },
-				{ id: 7, name: "Car", ST: 11, ET: 13, imgURL: "http://cdn.wonderfulengineering.com/wp-content/uploads/2013/11/bmw-cars-picture.jpg", redURL: carItem, price: 1000000 },
-			    { id: 8, name: "Glass", ST: 11, ET: 15, imgURL: "http://mat2.materialicious.com/images/glass-houses-showcase-a-line-of-glass-furniture-o.jpg", redURL: glassItem, price: 10000 },
-				 { id: 9, name: "Table", ST: 14, ET: 15, imgURL: "http://i1.pepperfry.com/media/catalog/product/n/i/800x880/nilkamal-executive-acacia-computer-table-nilkamal-executive-acacia-computer-table-wrgfqj.jpg", redURL: tableItem, price: 3000 },
-				 { id: 10, name: "Chair", ST: 14, ET: 15, imgURL: "http://johnlewis.scene7.com/is/image/JohnLewis/233166328alt1?$prod_exlrg$", redURL: chairItem, price: 19000 },
-				 { id: 11, name: "Table", ST: 18, ET: 24, imgURL: "http://i1.pepperfry.com/media/catalog/product/t/w/800x880/two-seater-dining-set-in-white-colour-by-ventura-two-seater-dining-set-in-white-colour-by-ventura-mpm4hn.jpg", redURL: tableItem, price: 1000 },
-				 { id: 12, name: "Chair", ST: 18, ET: 24, imgURL: "http://johnlewis.scene7.com/is/image/JohnLewis/233166328alt1?$prod_exlrg$", redURL: chairItem, price: 1000 },
-				 { id: 13, name: "Cup", ST: 18, ET: 24, imgURL: "http://images.wisegeek.com/cup-of-white-sauce.jpg", redURL: cupItem, price: 1000 },
-				 { id: 14, name: "Cup", ST: 36, ET: 40, imgURL: "http://images.wisegeek.com/cup-of-white-sauce.jpg", redURL: cupItem, price: 1000 },
-				 { id: 15, name: "Shirt", ST: 42, ET: 56, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1000 },
-				 { id: 16, name: "Shirt", ST: 73, ET: 82, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1100 },
-				 { id: 17, name: "Shirt", ST: 18, ET: 24, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1200 },
-				 { id: 18, name: "Shirt", ST: 14, ET: 15, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1300 },
-				 { id: 19, name: "Tiles", ST: 14, ET: 15, imgURL: "http://hardwoodfloorscharlotte.com/wp-content/uploads/2014/02/plymouth-brown.jpg", redURL: tileItem, price: 1110 },
-                 { id: 20, name: "Spectales", ST: 18, ET: 21, imgURL: "http://www.firmoo.com/frame-images/1364/middle-unisex-plastic-eyeglasses-6485.png", redURL: spectItem, price: 1300 },
-                 { id: 21, name: "Shirt", ST: 39, ET: 41, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 },
-                 { id: 22, name: "Wall Decoration", ST: 35, ET: 37, imgURL: "http://bestinspired.com/wp-content/uploads/2015/04/Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
-				 { id: 23, name: "Ladies Dress", ST: 36, ET: 37, imgURL: "http://i01.i.aliimg.com/wsphoto/v6/543883757_1/Spring-2014-New-Brand-Dress-Little-Black-Dress-Fashion-Chiffon-Mini-Women-s-Ladies-Party-Sexy.jpg", redURL: ladiesDressItem1, price: 3000 },
-				 { id: 24, name: "Shirt", ST: 35, ET: 37, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 1000 },
-				 { id: 25, name: "ladies Dress", ST: 42, ET: 44, imgURL: "http://www.jabong.com/blog/wp-content/uploads/2015/07/holding8.jpg", redURL: ladiesDressItem1, price: 1090 },
-				 { id: 26, name: "ladies Dress", ST: 42, ET: 44, imgURL: "http://clothing9.in/wp-content/uploads/2015/04/Punjabi-Salwar-Kameez-Dresses-Design-2015-16-For-Modern-Girls-3.jpg", redURL: ladiesDressItem1, price: 1200 },
-				 { id: 27, name: "Mens Traditional", ST: 25, ET: 30, imgURL: "https://s-media-cache-ak0.pinimg.com/736x/b2/e4/cc/b2e4cc4ee39e80656ed74c151698c6b6.jpg", redURL: mentradItem, price: 2100 },
-				 { id: 28, name: "Mens Stole", ST: 25, ET: 30, imgURL: "http://www.inonit.in/images/item/6/e/e/kadi-print-woven-stole-red.jpg", redURL: menStoleItem, price: 200 },
-				 { id: 29, name: "Pooja Items", ST: 27, ET: 30, imgURL: "http://pimg.tradeindia.com/00457986/b/1/Silver-Pooja-Items.jpg", redURL: poojaItems, price: 130000 },
-				 { id: 30, name: "ladies Dress", ST: 45, ET: 51, imgURL: "http://clothing9.in/wp-content/uploads/2015/04/Punjabi-Salwar-Kameez-Dresses-Design-2015-16-For-Modern-Girls-3.jpg", redURL: ladiesDressItem1, price: 1900 },
-				 { id: 31, name: "ladies Dress", ST: 54, ET: 55, imgURL: "http://cdn.shopify.com/s/files/1/0611/8081/products/6_2015_DESIGN_LADIES_WEAR_SALWAR_KAMEEZ_DRESS_MATERIAL_SHOP_ONLINE_PINK_A.jpg?v=1422628079", redURL: ladiesDressItem1, price: 1700 },
-				 { id: 32, name: "Gold Ring", ST: 61, ET: 63, imgURL: "https://zaveribazaarjewelers.com/thumbL/images/5_Indian_Gold_Rings_(Mens)_58180.jpg", redURL: menStoleItem, price: 10090 },
-				 { id: 33, name: "Watch", ST: 61, ET: 63, imgURL: "http://i01.i.aliimg.com/photo/v0/150660583/Black_Dial_Yellow_Gold_Plated_Luxurman_Diamond.jpg", redURL: menStoleItem, price: 5000 },
-			     { id: 34, name: "Gold Chain", ST: 61, ET: 63, imgURL: "http://www.pics4world.com/vb/imgcache/2/21663showing.jpg", redURL: menStoleItem, price: 20000 },
-				 { id: 35, name: "Phone", ST: 61, ET: 63, imgURL: "http://thesweetsetup.com/wp-content/uploads/2014/01/hurley-iphone_iphone5s_silver_portrait.jpg", redURL: menStoleItem, price: 50000 },
-				 { id: 36, name: "Sofa", ST: 77, ET: 82, imgURL: "http://www.homelogy.net/furniture/wp-content/uploads/2015/06/red-sofa-4.jpg", redURL: sofaItem, price: 32000 },
-			     { id: 37, name: "Bhudha", ST: 77, ET: 82, imgURL: "http://www.santosha.com/assets/images/teracotta_buddha.jpg", redURL: bhudhaItem, price: 4500 },
-				 { id: 38, name: "Saree", ST: 109, ET: 115, imgURL: "https://www.expatads.com/adpics1/2013/8/online-saree-shopping-online-shopping-wedding-sarees-and-apparel-shopping-saree521f03a39961fb974620.jpg", redURL: sareeItem, price: 4500 },
-				 { id: 39, name: "Shirt", ST: 109, ET: 115, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 },
-				 { id: 40, name: "ladies Ear Ring", ST: 45, ET: 51, imgURL: "http://i01.i.aliimg.com/wsphoto/v0/1966713769_1/Shell-natural-Pearl-Earrings-Ladies-Long-Earring-18K-gold-plated-with-Cubic-zircon-new-designer-flower.jpg", redURL: earringItem, price: 19000 },
-				 { id: 41, name: "Shirt", ST: 94, ET: 96, imgURL: "https://www.blueinc.co.uk/images/mens-red-marl-plain-t-shirt-p19002-15536_zoom.jpg", redURL: shirtItem, price: 1900 },
-				  { id: 39, name: "Shirt", ST: 118, ET: 145, imgURL: "http://www.crunchwear.com/wp-content/uploads/2013/08/Personal-Soundtrack-shirt.jpg", redURL: shirtItem, price: 900 }
+                { id: 1, name: "Blazer", ST: 11, ET: 13, imgURL: "Blazer.jpg", redURL: blazerItem, price: 10000 },
+                { id: 2, name: "Cap", ST: 39, ET: 40, imgURL: "cap.png", redURL: capItem, price: 1000 },
+                { id: 3, name: "car", ST: 86, ET: 87, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+                { id: 4, name: "Dinning", ST: 36, ET: 40, imgURL: "dinning.jpg", redURL: DiningItem, price: 19000 },
+                { id: 5, name: "cycle", ST: 118, ET: 145, imgURL: "cycle.jpg", redURL: CycleItem, price: 22000 },
+				{ id: 6, name: "cycle", ST: 7, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
+				{ id: 7, name: "Car", ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+			    { id: 8, name: "Glass", ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 10000 },
+				 { id: 9, name: "Table", ST: 14, ET: 15, imgURL: "table.jpg", redURL: tableItem, price: 3000 },
+				 { id: 10, name: "Chair", ST: 14, ET: 15, imgURL: "chair.jpg", redURL: chairItem, price: 19000 },
+				 { id: 11, name: "Table", ST: 18, ET: 24, imgURL: "dinning.jpg", redURL: tableItem, price: 1000 },
+				 { id: 12, name: "Chair", ST: 18, ET: 24, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
+				 { id: 13, name: "Cup", ST: 18, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
+				 { id: 14, name: "Cup", ST: 36, ET: 40, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
+				 { id: 15, name: "Shirt", ST: 42, ET: 56, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
+				 { id: 16, name: "Shirt", ST: 73, ET: 82, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
+				 { id: 17, name: "Shirt", ST: 18, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1200 },
+				 { id: 18, name: "Shirt", ST: 14, ET: 15, imgURL: "shirt.jpg", redURL: shirtItem, price: 1300 },
+				 { id: 19, name: "Tiles", ST: 14, ET: 15, imgURL: "Tiles.jpg", redURL: tileItem, price: 1110 },
+                 { id: 20, name: "Spectales", ST: 18, ET: 21, imgURL: "eyeglass.png", redURL: spectItem, price: 1300 },
+                 { id: 21, name: "Shirt", ST: 39, ET: 41, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
+                 { id: 22, name: "Wall Decoration", ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
+				 { id: 23, name: "Ladies Dress", ST: 36, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 3000 },
+				 { id: 24, name: "Shirt", ST: 35, ET: 37, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
+				 { id: 25, name: "ladies Dress", ST: 42, ET: 44, imgURL: "ladiesdress2.jpg", redURL: ladiesDressItem1, price: 1090 },
+				 { id: 26, name: "ladies Dress", ST: 42, ET: 44, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1200 },
+				 { id: 27, name: "Mens Traditional", ST: 25, ET: 30, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 2100 },
+				 { id: 28, name: "Mens Stole", ST: 25, ET: 30, imgURL: "mensstole.jpg", redURL: menStoleItem, price: 200 },
+				 { id: 29, name: "Pooja Items", ST: 27, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 130000 },
+				 { id: 30, name: "ladies Dress", ST: 45, ET: 51, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1900 },
+				 { id: 31, name: "ladies Dress", ST: 54, ET: 55, imgURL: "ladiesdress4.jpg", redURL: ladiesDressItem1, price: 1700 },
+				 { id: 32, name: "Gold Ring", ST: 61, ET: 63, imgURL: "goldring.jpg", redURL: menStoleItem, price: 10090 },
+				 { id: 33, name: "Watch", ST: 61, ET: 63, imgURL: "watch.jpg", redURL: menStoleItem, price: 5000 },
+			     { id: 34, name: "Gold Chain", ST: 61, ET: 63, imgURL: "goldchain.jpg", redURL: menStoleItem, price: 20000 },
+				 { id: 35, name: "Phone", ST: 61, ET: 63, imgURL: "phone.jpg", redURL: menStoleItem, price: 50000 },
+				 { id: 36, name: "Sofa", ST: 77, ET: 82, imgURL: "sofa.jpg", redURL: sofaItem, price: 32000 },
+			     { id: 37, name: "Bhudha", ST: 77, ET: 82, imgURL: "budha.jpg", redURL: bhudhaItem, price: 4500 },
+				 { id: 38, name: "Saree", ST: 109, ET: 115, imgURL: "saree.jpg", redURL: sareeItem, price: 4500 },
+				 { id: 39, name: "Shirt", ST: 109, ET: 115, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
+				 { id: 40, name: "ladies Ear Ring", ST: 45, ET: 51, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
+				 { id: 41, name: "Shirt", ST: 94, ET: 96, imgURL: "shirt.jpg", redURL: shirtItem, price: 1900 },
+				  { id: 39, name: "Shirt", ST: 118, ET: 145, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 }
 				   
 
 					
@@ -253,7 +253,7 @@ angular.module('myApp.view1', ['ui.router'])
 
 		// Update the slider value
 		seekBar.value = value;
-		seektime.textContent = Math.floor(video.currentTime);
+		//seektime.textContent = Math.floor(video.currentTime);
 	});
 
 	// Pause the video when the seek handle is being dragged
@@ -271,6 +271,6 @@ angular.module('myApp.view1', ['ui.router'])
 		// Update the video volume
 		video.volume = volumeBar.value;
 	});
-	$scope.$apply();
+	//$scope.$apply();
 
 }]);
