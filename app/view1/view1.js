@@ -71,7 +71,7 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 39, name: "Shirt", ST: 109, ET: 115, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
 				 { id: 40, name: "ladies Ear Ring", ST: 45, ET: 51, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
 				 { id: 41, name: "Shirt", ST: 94, ET: 96, imgURL: "shirt.jpg", redURL: shirtItem, price: 1900 },
-				  { id: 39, name: "Shirt", ST: 118, ET: 145, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 }
+				  { id: 42, name: "Shirt", ST: 118, ET: 145, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 }
 				   
 
 					
