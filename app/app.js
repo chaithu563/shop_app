@@ -9,6 +9,7 @@ underscore.factory('_', function () {
 angular.module('myApp', [
   'ui.router',
   'myApp.view1',
+  'myApp.home',
    'myApp.service',
   'ui.bootstrap',
    'underscore',
@@ -20,10 +21,16 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider
-      .state('home', {
-          url: '/home',
+      .state('video', {
+          url: '/video',
           templateUrl: 'view1/view1.html',
           controller: 'View1Ctrl'
+      });
+    $stateProvider
+      .state('home', {
+          url: '/home',
+          templateUrl: 'home/home.html',
+          controller: 'homeCtrl'
       })
 
 }]);
