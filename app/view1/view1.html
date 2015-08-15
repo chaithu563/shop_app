@@ -14,24 +14,24 @@
 	<div id="wrap_video">
 
 		<div>
-			<div class="video_overlays" ng-show="isVisible">
+			<!--<div class="video_overlays" ng-show="isVisible">
 				<ul>
 					<li ng-repeat="item in availItems">
-                       <!-- ng-mouseleave="isPriceVisible=0" -->
+                      
 						<img ng-mouseleave="isPriceVisible=0" ng-mouseover="isPriceVisible=1" ng-init="isPriceVisible=0" ng-attr-title="{{ item.name }}" ng-click="openInNewWindow(item)" id="itemImg" ng-src="../app/img/shop_img/{{item.imgURL}}" alt="" />
                         <div class="price" ng-show="isPriceVisible">
                           <span style="margin-bottom:2px;  font-family:'Comic Sans MS' ;font-size:12px">{{ item.price }}</span>  <img id="rupee" class="shoprupee" src="../app/img/indian-rupee.png" />
                         </div>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 
 			<div>
-
-				<video id="MyVideo1"  class="opacity-{{opacityinorout}}">
+                <iframe id="MyVideo1" width="580" height="670" src="//embed.wirewax.com/8018456/FF0044/"  ></iframe>
+				<!--<video id="MyVideo1"  class="opacity-{{opacityinorout}}">
 					<source src="../app/video/sreemanthudu.mp4" type="video/mp4">
-				</video>
-				<div id="video-controls">
+				</video>-->
+				<!--<div id="video-controls">
 					<img class="controlimg" title="select Item" src="../app/img/cart-icon.png" ng-click="ShowItemsAvail()" alt="" />
 
 					<img id="play-pause" class="controlimg" ng-src="../app/img/{{playorpause}}-icon.png" alt="" />
@@ -42,7 +42,7 @@
 					<input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
 
 					<img id="full-screen" title="Full screen" src="../app/img/FullScreen.png" class="controlimg" alt="" />
-				</div>
+				</div>-->
 
 			</div>
 		</div>
