@@ -15,18 +15,21 @@
             <!-- mytest -->
             <div class="modal">
                 <div class="modal-dialog">
-                    <div class="modal-header">
-                        <h2>Modal in CSS?</h2>
-                        <a href="#close" class="btn-close">×</a>
+                    <div class="modal-header" align="center">
+                        <h2>{{selectedItem.name}}</h2>
+                        <a ng-click="closeItemSelected()" class="close">×</a>
                         <!--CHANGED TO "#close"-->
                     </div>
                     <div class="modal-body">
-                        <p>One modal example here! :D</p>
+                        <!--<p>One modal example here! :D</p>-->
+                        <img style="width:40%;height:40%;cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
+                        <h3>Price {{selectedItem.price }}</h3> 
+                        <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
                     </div>
-                    <div class="modal-footer">
+                   <!-- <div class="modal-footer">
                         <a href="#close" class="btn">Nice!</a>
-                        <!--CHANGED TO "#close"-->
-                    </div>
+                       
+                    </div>-->
                 </div>
             </div>
 
