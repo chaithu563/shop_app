@@ -13,14 +13,14 @@
 
         </div>
 
-
-
         <div class="video_overlays" ng-show="isVisible">
             <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
                 <img style="width: 30px; height: 30px;" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
             </div>
 
-
+            <!-- <div  style="top:20%;left:20%;" ng-class="all-overlays overlay-image overlay-1 out">
+                    <img  style="width: 30px; height: 30px;" ng-src="../app/img/plus-tag.svg">
+                </div>-->
         </div>
 
         <div class="videodiv">
@@ -44,8 +44,8 @@
 
         </div>
 
-    </div>
 
+    </div>
 
     <br />
 
