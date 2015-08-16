@@ -1,23 +1,243 @@
-﻿angular.module("myApp.directives", []).directive("slick", ["$timeout", function (a) {
-	return {
-		restrict: "AEC",
-		scope:
-			{
-				initOnload: "@", data: "=", currentIndex: "=", accessibility: "@", adaptiveHeight: "@", arrows: "@", asNavFor: "@", appendArrows: "@", appendDots: "@",
-				autoplay: "@", autoplaySpeed: "@", centerMode: "@", centerPadding: "@", cssEase: "@", customPaging: "&", dots: "@", draggable: "@", easing: "@", fade: "@", focusOnSelect: "@",
-				infinite: "@", initialSlide: "@", lazyLoad: "@", onBeforeChange: "&", onAfterChange: "&", onInit: "&", onReInit: "&", onSetPosition: "&", pauseOnHover: "@", pauseOnDotsHover: "@", responsive: "=", rtl: "@", slide: "@", slidesToShow: "@", slidesToScroll: "@", speed: "@", swipe: "@", swipeToSlide: "@", touchMove: "@", touchThreshold: "@", useCSS: "@", variableWidth: "@", vertical: "@", prevArrow: "@", nextArrow: "@"
-			},
-		link: function (b, c, d) {
-			var e, f, g;
-			return e = function () {
-				return a(function () {
-					var a; return a = $(c), a.unslick(), a.find(".slick-list").remove(), a
-				})
-			},
-				f = function () {
-					return a(function () { var a, e; return e = $(c), null != b.currentIndex && (a = b.currentIndex), e.slick({ accessibility: "false" !== b.accessibility, adaptiveHeight: "true" === b.adaptiveHeight, arrows: "false" !== b.arrows, asNavFor: b.asNavFor ? b.asNavFor : void 0, appendArrows: $(b.appendArrows ? b.appendArrows : c), appendDots: $(b.appendDots ? b.appendDots : c), autoplay: "true" === b.autoplay, autoplaySpeed: null != b.autoplaySpeed ? parseInt(b.autoplaySpeed, 10) : 3e3, centerMode: "true" === b.centerMode, centerPadding: b.centerPadding || "50px", cssEase: b.cssEase || "ease", customPaging: d.customPaging ? b.customPaging : void 0, dots: "true" === b.dots, draggable: "false" !== b.draggable, easing: b.easing || "linear", fade: "true" === b.fade, focusOnSelect: "true" === b.focusOnSelect, infinite: "false" !== b.infinite, initialSlide: b.initialSlide || 0, lazyLoad: b.lazyLoad || "ondemand", onBeforeChange: d.onBeforeChange ? b.onBeforeChange : void 0, onAfterChange: function (c, e) { return d.onAfterChange && b.onAfterChange(), null != a ? b.$apply(function () { return a = e, b.currentIndex = e }) : void 0 }, onInit: function (c) { return d.onInit && b.onInit(), null != a ? c.slideHandler(a) : void 0 }, onReInit: d.onReInit ? b.onReInit : void 0, onSetPosition: d.onSetPosition ? b.onSetPosition : void 0, pauseOnHover: "false" !== b.pauseOnHover, responsive: b.responsive || void 0, rtl: "true" === b.rtl, slide: b.slide || "div", slidesToShow: null != b.slidesToShow ? parseInt(b.slidesToShow, 10) : 1, slidesToScroll: null != b.slidesToScroll ? parseInt(b.slidesToScroll, 10) : 1, speed: null != b.speed ? parseInt(b.speed, 10) : 300, swipe: "false" !== b.swipe, swipeToSlide: "true" === b.swipeToSlide, touchMove: "false" !== b.touchMove, touchThreshold: b.touchThreshold ? parseInt(b.touchThreshold, 10) : 5, useCSS: "false" !== b.useCSS, variableWidth: "true" === b.variableWidth, vertical: "true" === b.vertical, prevArrow: b.prevArrow ? $(b.prevArrow) : void 0, nextArrow: b.nextArrow ? $(b.nextArrow) : void 0 }), b.$watch("currentIndex", function (b) { return null != a && null != b && b !== a ? e.slickGoTo(b) : void 0 }) })
-				},
-				b.initOnload ? (g = !1, b.$watch("data", function (a) { return null != a ? (g && e(), f(), g = !0) : void 0 })) : f()
-		}
-	}
-}]);
+﻿/*!
+ * angular-slick-carousel
+ * DevMark <hc.devmark@gmail.com>,Karan Batra-Daitch <karanganesha04@gmail.com>
+ * https://github.com/devmark/angular-slick-carousel
+ * Version: 3.0.9 - 2015-08-03T15:13:14.090Z
+ * License: MIT
+ */
+
+
+'use strict';
+
+angular
+    .module('myApp.directives', [])
+    //global config
+    .constant('slickCarouselConfig', {
+        method: {},
+        event: {}
+    })
+    .directive('slick', [
+        '$timeout', 'slickCarouselConfig', function ($timeout, slickCarouselConfig) {
+            var slickMethodList, slickEventList;
+            slickMethodList = ['slickGoTo', 'slickNext', 'slickPrev', 'slickPause', 'slickPlay', 'slickAdd', 'slickRemove', 'slickFilter', 'slickUnfilter', 'unslick'];
+            slickEventList = ['afterChange', 'beforeChange', 'breakpoint', 'destroy', 'edge', 'init', 'reInit', 'setPosition', 'swipe'];
+
+            return {
+                scope: {
+                    settings: '=',
+                    data: '=',
+                    accessibility: '@',
+                    adaptiveHeight: '@',
+                    autoplay: '@',
+                    autoplaySpeed: '@',
+                    arrows: '@',
+                    asNavFor: '@',
+                    appendArrows: '@',
+                    prevArrow: '@',
+                    nextArrow: '@',
+                    centerMode: '@',
+                    centerPadding: '@',
+                    cssEase: '@',
+                    customPaging: '&',
+                    dots: '@',
+                    draggable: '@',
+                    fade: '@',
+                    focusOnSelect: '@',
+                    easing: '@',
+                    edgeFriction: '@',
+                    infinite: '@',
+                    initialSlide: '@',
+                    lazyLoad: '@',
+                    mobileFirst: '@',
+                    pauseOnHover: '@',
+                    pauseOnDotsHover: '@',
+                    respondTo: '@',
+                    responsive: '=?',
+                    rows: '@',
+                    slide: '@',
+                    slidesPerRow: '@',
+                    slidesToShow: '@',
+                    slidesToScroll: '@',
+                    speed: '@',
+                    swipe: '@',
+                    swipeToSlide: '@',
+                    touchMove: '@',
+                    touchThreshold: '@',
+                    useCSS: '@',
+                    variableWidth: '@',
+                    vertical: '@',
+                    verticalSwiping: '@',
+                    rtl: '@'
+                },
+                restrict: 'AE',
+                link: function (scope, element, attr) {
+                    var options, initOptions, destroy, init, destroyAndInit, currentIndex = 0;
+
+                    initOptions = function () {
+                        options = angular.extend(angular.copy(slickCarouselConfig), {
+                            accessibility: scope.accessibility !== 'false',
+                            adaptiveHeight: scope.adaptiveHeight === 'true',
+                            autoplay: scope.autoplay === 'true',
+                            autoplaySpeed: scope.autoplaySpeed != null ? parseInt(scope.autoplaySpeed, 10) : 3000,
+                            arrows: scope.arrows !== 'false',
+                            asNavFor: scope.asNavFor ? scope.asNavFor : void 0,
+                            appendArrows: scope.appendArrows ? $(scope.appendArrows) : $(element),
+                            prevArrow: scope.prevArrow ? $(scope.prevArrow) : void 0,
+                            nextArrow: scope.nextArrow ? $(scope.nextArrow) : void 0,
+                            centerMode: scope.centerMode === 'true',
+                            centerPadding: scope.centerPadding || '50px',
+                            cssEase: scope.cssEase || 'ease',
+                            customPaging: attr.customPaging ? customPaging : void 0,
+                            dots: scope.dots === 'true',
+                            draggable: scope.draggable !== 'false',
+                            fade: scope.fade === 'true',
+                            focusOnSelect: scope.focusOnSelect === 'true',
+                            easing: scope.easing || 'linear',
+                            edgeFriction: scope.edgeFriction || 0.15,
+                            infinite: scope.infinite !== 'false',
+                            initialSlide: scope.initialSlide || 0,
+                            lazyLoad: scope.lazyLoad || 'ondemand',
+                            mobileFirst: scope.mobileFirst === 'true',
+                            pauseOnHover: scope.pauseOnHover !== 'false',
+                            pauseOnDotsHover: scope.pauseOnDotsHover === "true",
+                            respondTo: scope.respondTo != null ? scope.respondTo : 'window',
+                            responsive: scope.responsive || void 0,
+                            rows: scope.rows != null ? parseInt(scope.rows, 10) : 1,
+                            slide: scope.slide || 'div',
+                            slidesPerRow: scope.slidesPerRow != null ? parseInt(scope.slidesPerRow, 10) : 1,
+                            slidesToShow: scope.slidesToShow != null ? parseInt(scope.slidesToShow, 10) : 1,
+                            slidesToScroll: scope.slidesToScroll != null ? parseInt(scope.slidesToScroll, 10) : 1,
+                            speed: scope.speed != null ? parseInt(scope.speed, 10) : 300,
+                            swipe: scope.swipe !== 'false',
+                            swipeToSlide: scope.swipeToSlide === 'true',
+                            touchMove: scope.touchMove !== 'false',
+                            touchThreshold: scope.touchThreshold ? parseInt(scope.touchThreshold, 10) : 5,
+                            useCSS: scope.useCSS !== 'false',
+                            variableWidth: scope.variableWidth === 'true',
+                            vertical: scope.vertical === 'true',
+                            verticalSwiping: scope.verticalSwiping === 'true',
+                            rtl: scope.rtl === 'true'
+                        }, scope.settings);
+
+                    };
+
+                    destroy = function () {
+                        var slickness = angular.element(element);
+                        slickness.remove('slick-list');
+                        slickness.slick('unslick');
+                        return slickness;
+                    };
+
+                    init = function () {
+                        return $timeout(function () {
+                            initOptions();
+                            var slickness = angular.element(element);
+
+                            if (angular.element(element).hasClass('slick-initialized')) {
+                                return slickness.slick('getSlick');
+                            } else {
+
+                                // Event
+                                slickness.on('init', function (event, slick) {
+                                    if (typeof options.event.init !== 'undefined') {
+                                        options.event.init(event, slick);
+                                    }
+                                    if (currentIndex != null) {
+                                        return slick.slideHandler(currentIndex);
+                                    }
+                                });
+
+                                slickness.slick(options);
+                            }
+                            scope.internalControl = options.method || {};
+
+                            // Method
+                            slickMethodList.forEach(function (value) {
+                                scope.internalControl[value] = function () {
+                                    var args;
+                                    args = Array.prototype.slice.call(arguments);
+                                    args.unshift(value);
+                                    slickness.slick.apply(element, args);
+                                };
+                            });
+
+                            // Event
+                            slickness.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                                currentIndex = currentSlide;
+                                if (typeof options.event.afterChange !== 'undefined') {
+                                    options.event.afterChange(event, slick, currentSlide, nextSlide);
+                                }
+                            });
+
+                            slickness.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                                if (typeof options.event.beforeChange !== 'undefined') {
+                                    options.event.beforeChange(event, slick, currentSlide, nextSlide);
+                                }
+                            });
+
+                            slickness.on('reInit', function (event, slick) {
+                                if (typeof options.event.reInit !== 'undefined') {
+                                    options.event.reInit(event, slick);
+                                }
+                            });
+
+                            if (typeof options.event.breakpoint !== 'undefined') {
+                                slickness.on('breakpoint', function (event, slick, breakpoint) {
+                                    options.event.breakpoint(event, slick, breakpoint);
+                                });
+                            }
+                            if (typeof options.event.destroy !== 'undefined') {
+                                slickness.on('destroy', function (event, slick) {
+                                    options.event.destroy(event, slick);
+                                });
+                            }
+                            if (typeof options.event.edge !== 'undefined') {
+                                slickness.on('edge', function (event, slick, direction) {
+                                    options.event.edge(event, slick, direction);
+                                });
+                            }
+
+                            if (typeof options.event.setPosition !== 'undefined') {
+                                slickness.on('setPosition', function (event, slick) {
+                                    options.event.setPosition(event, slick);
+                                });
+                            }
+                            if (typeof options.event.swipe !== 'undefined') {
+                                slickness.on('swipe', function (event, slick, direction) {
+                                    options.event.swipe(event, slick, direction);
+                                });
+                            }
+
+                        });
+                    };
+
+                    destroyAndInit = function () {
+                        if (angular.element(element).hasClass('slick-initialized')) {
+                            destroy();
+                        }
+                        $timeout(function () {
+                            init();
+                        }, 1);
+                    };
+
+                    element.one('$destroy', function () {
+                        destroy();
+                    });
+
+                    scope.$watch('settings', function (newVal, oldVal) {
+                        if (newVal !== null) {
+                            return destroyAndInit();
+                        }
+                    }, true);
+
+                    return scope.$watch('data', function (newVal, oldVal) {
+                        if (newVal != null) {
+                            return destroyAndInit();
+                        }
+                    }, true);
+
+
+                }
+            };
+        }
+    ]);

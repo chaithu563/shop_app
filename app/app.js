@@ -15,6 +15,7 @@ angular.module('myApp', [
    'underscore',
    'ngResource',
    'myApp.directives'
+  
 ]).
 
 config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {

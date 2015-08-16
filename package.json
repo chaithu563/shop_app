@@ -1,10 +1,10 @@
 {
-  "name": "cisco_app",
+  "name": "shop_app",
   "main": "server.js",
   "private": true,
   "version": "0.0.0",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/chaithu563/cisco_app",
+  "repository": "https://github.com/chaithu563/shop_app",
   "license": "MIT",
   "dependencies": {
     "express": "^4.4.3"

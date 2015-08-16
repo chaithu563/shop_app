@@ -30,48 +30,48 @@ angular.module('myApp.view1', ['ui.router'])
 	var earringItem = "http://www.snapdeal.com/product/shinningdiva-aashiqui-2-earrings-in/516664782?utm_source=earth_feed&utm_campaign=6_341&utm_medium=102426941&vendorCode=S82cc7";
 
 	var items = [
-                { id: 1, name: "Blazer", ST: 11, ET: 13, imgURL: "Blazer.jpg", redURL: blazerItem, price: 10000 },
-                { id: 2, name: "Cap", ST: 39, ET: 40, imgURL: "cap.png", redURL: capItem, price: 1000 },
-                { id: 3, name: "car", ST: 86, ET: 87, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
-                { id: 4, name: "Dinning", ST: 36, ET: 40, imgURL: "dinning.jpg", redURL: DiningItem, price: 19000 },
-                { id: 5, name: "cycle", ST: 118, ET: 145, imgURL: "cycle.jpg", redURL: CycleItem, price: 22000 },
-				{ id: 6, name: "cycle", ST: 7, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
-				{ id: 7, name: "Car", ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
-			    { id: 8, name: "Glass", ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 10000 },
-				 { id: 9, name: "Table", ST: 14, ET: 15, imgURL: "table.jpg", redURL: tableItem, price: 3000 },
-				 { id: 10, name: "Chair", ST: 14, ET: 15, imgURL: "chair.jpg", redURL: chairItem, price: 19000 },
-				 { id: 11, name: "Table", ST: 18, ET: 24, imgURL: "dinning.jpg", redURL: tableItem, price: 1000 },
-				 { id: 12, name: "Chair", ST: 18, ET: 24, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
-				 { id: 13, name: "Cup", ST: 18, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
-				 { id: 14, name: "Cup", ST: 36, ET: 40, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
-				 { id: 15, name: "Shirt", ST: 42, ET: 56, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
-				 { id: 16, name: "Shirt", ST: 73, ET: 82, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
-				 { id: 17, name: "Shirt", ST: 18, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1200 },
-				 { id: 18, name: "Shirt", ST: 14, ET: 15, imgURL: "shirt.jpg", redURL: shirtItem, price: 1300 },
-				 { id: 19, name: "Tiles", ST: 14, ET: 15, imgURL: "Tiles.jpg", redURL: tileItem, price: 1110 },
-                 { id: 20, name: "Spectales", ST: 18, ET: 21, imgURL: "eyeglass.png", redURL: spectItem, price: 1300 },
-                 { id: 21, name: "Shirt", ST: 39, ET: 41, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
-                 { id: 22, name: "Wall Decoration", ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
-				 { id: 23, name: "Ladies Dress", ST: 36, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 3000 },
-				 { id: 24, name: "Shirt", ST: 35, ET: 37, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
-				 { id: 25, name: "ladies Dress", ST: 42, ET: 44, imgURL: "ladiesdress2.jpg", redURL: ladiesDressItem1, price: 1090 },
-				 { id: 26, name: "ladies Dress", ST: 42, ET: 44, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1200 },
-				 { id: 27, name: "Mens Traditional", ST: 25, ET: 30, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 2100 },
-				 { id: 28, name: "Mens Stole", ST: 25, ET: 30, imgURL: "mensstole.jpg", redURL: menStoleItem, price: 200 },
-				 { id: 29, name: "Pooja Items", ST: 27, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 130000 },
-				 { id: 30, name: "ladies Dress", ST: 45, ET: 51, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1900 },
-				 { id: 31, name: "ladies Dress", ST: 54, ET: 55, imgURL: "ladiesdress4.jpg", redURL: ladiesDressItem1, price: 1700 },
-				 { id: 32, name: "Gold Ring", ST: 61, ET: 63, imgURL: "goldring.jpg", redURL: menStoleItem, price: 10090 },
-				 { id: 33, name: "Watch", ST: 61, ET: 63, imgURL: "watch.jpg", redURL: menStoleItem, price: 5000 },
-			     { id: 34, name: "Gold Chain", ST: 61, ET: 63, imgURL: "goldchain.jpg", redURL: menStoleItem, price: 20000 },
-				 { id: 35, name: "Phone", ST: 61, ET: 63, imgURL: "phone.jpg", redURL: menStoleItem, price: 50000 },
-				 { id: 36, name: "Sofa", ST: 77, ET: 82, imgURL: "sofa.jpg", redURL: sofaItem, price: 32000 },
-			     { id: 37, name: "Bhudha", ST: 77, ET: 82, imgURL: "budha.jpg", redURL: bhudhaItem, price: 4500 },
-				 { id: 38, name: "Saree", ST: 109, ET: 115, imgURL: "saree.jpg", redURL: sareeItem, price: 4500 },
-				 { id: 39, name: "Shirt", ST: 109, ET: 115, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
-				 { id: 40, name: "ladies Ear Ring", ST: 45, ET: 51, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
-				 { id: 41, name: "Shirt", ST: 94, ET: 96, imgURL: "shirt.jpg", redURL: shirtItem, price: 1900 },
-				  { id: 42, name: "Shirt", ST: 118, ET: 145, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 }
+                { id: 1,x:20, y:20,name: "Blazer", ST: 11, ET: 13, imgURL: "Blazer.jpg", redURL: blazerItem, price: 10000 },
+                { id: 2, x:10, y:11, name: "Cap", ST: 39, ET: 40, imgURL: "cap.png", redURL: capItem, price: 1000 },
+                { id: 3, x: 10, y: 18, name: "car", ST: 86, ET: 87, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+                { id: 4, x: 19, y: 17, name: "Dinning", ST: 36, ET: 40, imgURL: "dinning.jpg", redURL: DiningItem, price: 19000 },
+                { id: 5, x: 21, y: 29, name: "cycle", ST: 118, ET: 145, imgURL: "cycle.jpg", redURL: CycleItem, price: 22000 },
+				{ id: 6, name: "cycle", x: 54, y: 3, ST: 7, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
+				{ id: 7, name: "Car", x: 32, y: 41, ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+			    { id: 8, name: "Glass", x: 24, y: 67, ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 10000 },
+				 { id: 9, name: "Table", x: 15, y: 49, ST: 14, ET: 15, imgURL: "table.jpg", redURL: tableItem, price: 3000 },
+				 { id: 10, name: "Chair", x: 41, y: 29,  ST: 14, ET: 15, imgURL: "chair.jpg", redURL: chairItem, price: 19000 },
+				 { id: 11, name: "Table", x: 36, y: 35, ST: 18, ET: 24, imgURL: "dinning.jpg", redURL: tableItem, price: 1000 },
+				 { id: 12, name: "Chair", x: 30, y: 40, ST: 18, ET: 24, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
+				 { id: 13, name: "Cup", x: 11, y: 29, ST: 18, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
+				 { id: 14, name: "Cup", x: 21, y: 22, ST: 36, ET: 40, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
+				 { id: 15, name: "Shirt", x: 28, y: 29, ST: 42, ET: 56, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
+				 { id: 16, name: "Shirt", x: 21, y: 29, ST: 73, ET: 82, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
+				 { id: 17, name: "Shirt", x: 08, y: 46, ST: 18, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1200 },
+				 { id: 18, name: "Shirt", x: 11, y: 27, ST: 14, ET: 15, imgURL: "shirt.jpg", redURL: shirtItem, price: 1300 },
+				 { id: 19, name: "Tiles", x: 33, y: 63, ST: 14, ET: 15, imgURL: "Tiles.jpg", redURL: tileItem, price: 1110 },
+                 { id: 20, name: "Spectales", x: 67, y: 11, ST: 18, ET: 21, imgURL: "eyeglass.png", redURL: spectItem, price: 1300 },
+                 { id: 21, name: "Shirt", x: 22, y: 52,  ST: 39, ET: 41, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
+                 { id: 22, name: "Wall Decoration", x: 45, y: 33, ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
+				 { id: 23, name: "Ladies Dress", x: 19, y: 45, ST: 36, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 3000 },
+				 { id: 24, name: "Shirt", x: 54, y: 33, ST: 35, ET: 37, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
+				 { id: 25, name: "ladies Dress", x: 36, y: 64, ST: 42, ET: 44, imgURL: "ladiesdress2.jpg", redURL: ladiesDressItem1, price: 1090 },
+				 { id: 26, name: "ladies Dress", x: 53, y: 11, ST: 42, ET: 44, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1200 },
+				 { id: 27, name: "Mens Traditional", x: 12, y: 56, ST: 25, ET: 30, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 2100 },
+				 { id: 28, name: "Mens Stole", x: 15, y: 34, ST: 25, ET: 30, imgURL: "mensstole.jpg", redURL: menStoleItem, price: 200 },
+				 { id: 29, name: "Pooja Items", x: 21, y: 11, ST: 27, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 130000 },
+				 { id: 30, name: "ladies Dress", x: 17, y: 29, ST: 45, ET: 51, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1900 },
+				 { id: 31, name: "ladies Dress", x: 64, y: 31, ST: 54, ET: 55, imgURL: "ladiesdress4.jpg", redURL: ladiesDressItem1, price: 1700 },
+				 { id: 32, name: "Gold Ring", x: 12, y: 29, ST: 61, ET: 63, imgURL: "goldring.jpg", redURL: menStoleItem, price: 10090 },
+				 { id: 33, name: "Watch", x: 23, y: 29, ST: 61, ET: 63, imgURL: "watch.jpg", redURL: menStoleItem, price: 5000 },
+			     { id: 34, name: "Gold Chain", x: 11, y: 19, ST: 61, ET: 63, imgURL: "goldchain.jpg", redURL: menStoleItem, price: 20000 },
+				 { id: 35, name: "Phone", x: 67, y: 9, ST: 61, ET: 63, imgURL: "phone.jpg", redURL: menStoleItem, price: 50000 },
+				 { id: 36, name: "Sofa", x: 7, y: 43, ST: 77, ET: 82, imgURL: "sofa.jpg", redURL: sofaItem, price: 32000 },
+			     { id: 37, name: "Bhudha", x: 11, y: 17, ST: 77, ET: 82, imgURL: "budha.jpg", redURL: bhudhaItem, price: 4500 },
+				 { id: 38, name: "Saree", x: 31, y: 19, ST: 109, ET: 115, imgURL: "saree.jpg", redURL: sareeItem, price: 4500 },
+				 { id: 39, name: "Shirt", x: 16, y: 09, ST: 109, ET: 115, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 },
+				 { id: 40, name: "ladies Ear Ring", x: 21, y: 29, ST: 45, ET: 51, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
+				 { id: 41, name: "Shirt", x: 51, y: 19,  ST: 94, ET: 96, imgURL: "shirt.jpg", redURL: shirtItem, price: 1900 },
+				  { id: 42, name: "Shirt", x: 31, y: 09, ST: 118, ET: 145, imgURL: "shirt.jpg", redURL: shirtItem, price: 900 }
 				   
 
 					
@@ -96,15 +96,7 @@ angular.module('myApp.view1', ['ui.router'])
 	$scope.openInNewWindow = function (item) {
 		$window.open(item.redURL);
 	}
-	//document.getElementById("MyVideo1").onplay(vidplay())
-
-
-
-
-
-
-	//search handle
-
+	
 	$scope.videos = [
            { name: 'Attharinti Daredi', code: '1' },
            { name: 'Aagadu', code: '2' },
@@ -164,22 +156,16 @@ angular.module('myApp.view1', ['ui.router'])
 	var volumeBar = document.getElementById("volume-bar");
 
 
-	// Event listener for the play/pause button
 	playButton.addEventListener("click", function () {
 		if (video.paused == true) {
 			// Play the video
 			video.play();
 			$scope.playorpause = "pause";
 
-			// Update the button text to 'Pause'
-			//  playButton.innerHTML = "Pause";
 		} else {
 			// Pause the video
 			video.pause();
 			$scope.playorpause = "play";
-
-			// Update the button text to 'Play'
-			// playButton.innerHTML = "Play";
 		}
 		$scope.opacityinorout = "out";
 		$scope.$apply();
@@ -253,9 +239,24 @@ angular.module('myApp.view1', ['ui.router'])
 
 		// Update the slider value
 		seekBar.value = value;
-		//seektime.textContent = Math.floor(video.currentTime);
+	    //seektime.textContent = Math.floor(video.currentTime);
+
+
+	    //handle plus position
+
+		handlePlusForItems();
+
 	});
 
+	function handlePlusForItems() {
+	    var vidCurTime = video.currentTime;
+	    var vidDuration = video.duration;
+
+	    var videoinSec = Math.round(vidCurTime);
+	  $scope.availItems= getAvailableItems();
+	  $scope.$apply();
+
+	}
 	// Pause the video when the seek handle is being dragged
 	seekBar.addEventListener("mousedown", function () {
 		video.pause();
@@ -271,6 +272,17 @@ angular.module('myApp.view1', ['ui.router'])
 		// Update the video volume
 		video.volume = volumeBar.value;
 	});
-	//$scope.$apply();
+
+	$scope.openSelectedItem = function (item) {
+
+	    $scope.isItemSelected = true;
+	    $scope.selectedItem = item;
+
+
+	}
+
+	$scope.closeItemSelected = function () {
+	    $scope.isItemSelected = false;
+	}
 
 }]);
