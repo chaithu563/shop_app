@@ -5,23 +5,16 @@
     <div id="wrap_video">
 
         <div class="item_overlays" ng-show="isItemSelected">
-            <!--<div class="item-drawer-header">
-                Choosen Item {{selectedItem.name}}
-                <button ng-click="closeItemSelected()" class="item-drawer-close-button" aria-label="Hide cards">
-                </button>
-
-               </div>-->
-
-            <!-- mytest -->
+     
             <div class="modal">
                 <div class="modal-dialog">
                     <div class="modal-header" align="center">
                         <h2>{{selectedItem.name}}</h2>
                         <a ng-click="closeItemSelected()" class="close">×</a>
-                        <!--CHANGED TO "#close"-->
+               
                     </div>
                     <div class="modal-body">
-                        <!--<p>One modal example here! :D</p>-->
+                      
                         <img style="width:40%;height:40%;cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
                         <h3>Price {{selectedItem.price }}</h3> 
                         <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
@@ -34,7 +27,7 @@
             </div>
 
 
-            <!-- mytest -->
+        
 
 
 
@@ -42,7 +35,7 @@
 
     <div class="video_overlays" ng-show="isVisible">
         <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
-            <img style="width: 30px; height: 30px;" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
+			<img  style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
         </div>
 
 
@@ -50,7 +43,7 @@
 
     <div class="videodiv">
 
-        <video id="MyVideo1" class="opacity-{{opacityinorout}}">
+        <video id="MyVideo1" class="opacity-{{opacityinorout}}" controls>
             <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
         </video>
 

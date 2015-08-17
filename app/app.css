@@ -215,6 +215,9 @@ button {
     top:0%;
     text-align: center;
 }
+.video_overlays .img .tooltip{
+	color: black;
+}
 
 
 #wrap_video {
