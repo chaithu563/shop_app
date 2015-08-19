@@ -8,14 +8,15 @@
      
             <div class="modal">
                 <div class="modal-dialog">
-                    <span class="modal-header">
-                        <h2>{{selectedItem.name}}</h2>
+                    <div class="modal-header">
+                    <span>   <h2>{{selectedItem.name}}</h2>
                        <!-- <a ng-click="closeItemSelected()" class="close">+</a>-->
                      <img  ng-click="closeItemSelected()" class="close" width="20" height="20" src="../app/img/close.png" alt="" />
-                    </span>
+                        </span> 
+                    </div>
                     <div class="modal-body">
                       
-                        <img width="72" height="72" style="cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
+                  <img width="100" height="100" style="cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
                        
                     </div>
                     <div class="modal-footer">
@@ -43,7 +44,7 @@
 
     <div class="videodiv">
 
-        <video id="MyVideo1" class="opacity-{{opacityinorout}}" controls>
+        <video id="MyVideo1" class="opacity-{{opacityinorout}}">
             <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
         </video>
 

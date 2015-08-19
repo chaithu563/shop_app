@@ -32,7 +32,7 @@ angular.module('myApp.view1', ['ui.router'])
 	var items = [
 				{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
                 { id: 1,x:40, y:47,name: "Blazer", ST: 11, ET: 13, imgURL: "Blazer.jpg", redURL: blazerItem, price: 10000 },
-				{ id: 7, name: "Car", x: 62, y: 11, ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+				{ id: 7, name: "Car", x: 62, y: 11, ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 10000 },
 			    { id: 8, name: "Glass", x: 24, y: 67, ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 10000 },
 				 { id: 9, name: "Table", x: 70, y: 79, ST: 14, ET: 15, imgURL: "table.jpg", redURL: tableItem, price: 3000 },
 				 { id: 10, name: "Chair", x: 71, y: 64, ST: 14, ET: 15, imgURL: "chair.jpg", redURL: chairItem, price: 19000 },
@@ -45,10 +45,10 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 13, name: "Cup", x: 83, y: 52, ST: 21, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
 				 { id: 17, name: "Shirt", x: 68, y: 46, ST: 21, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1200 },
 				 //{ id: 12, name: "Chair", x: 69, y: 20, ST: 21, ET: 24, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
-				 { id: 27, name: "Mens Traditional", x: 52, y: 76, ST: 25, ET: 26, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 2100 },
+				 { id: 27, name: "Men Dress", x: 52, y: 76, ST: 25, ET: 26, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 2100 },
 				 { id: 28, name: "Mens Stole", x: 35, y: 33, ST: 25, ET: 26, imgURL: "mensstole.jpg", redURL: menStoleItem, price: 200 },
-				 { id: 29, name: "Pooja Items", x: 85, y: 45, ST: 29, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 130000 },
-				 { id: 22, name: "Wall Decoration", x: 45, y: 80, ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 140000 },
+				 { id: 29, name: "Pooja Items", x: 85, y: 45, ST: 29, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 13000 },
+				 { id: 22, name: "Wall Decoration", x: 45, y: 80, ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 14000 },
 				 { id: 23, name: "Ladies Dress", x: 49, y: 65, ST: 35, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 3000 },
 				 { id: 4, x: 59, y: 11, name: "Dinning", ST: 35, ET: 37, imgURL: "dinning2.jpg", redURL: DiningItem, price: 19000 },
 				 { id: 14, name: "Cup", x: 74, y: 32, ST: 35, ET: 37, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
@@ -61,7 +61,7 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 25, name: "ladies Dress", x: 56, y: 43, ST: 43, ET: 43, imgURL: "ladiesdress2.jpg", redURL: ladiesDressItem1, price: 1090 },
                  //{ id: 23, name: "Ladies Dress", x: 19, y: 45, ST: 49, ET: 65, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 3000 },
 				 { id: 24, name: "Shirt", x: 54, y: 33, ST: 35, ET: 37, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
-				 { id: 40, name: "ladies Ear Ring", x: 40, y: 34, ST: 45, ET: 47, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
+				 { id: 40, name: "Ear Ring", x: 44, y: 34, ST: 45, ET: 47, imgURL: "ladiesearring.jpg", redURL: earringItem, price: 19000 },
 				 { id: 30, name: "ladies Dress", x: 70, y: 50, ST: 45, ET: 47, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem1, price: 1900 },
 				  { id: 24, name: "Shirt", x: 74, y: 43, ST: 48, ET: 49, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
 				   { id: 24, name: "Shirt", x: 74, y: 43, ST: 54, ET: 44, imgURL: "shirt.jpg", redURL: shirtItem, price: 1000 },
@@ -78,7 +78,7 @@ angular.module('myApp.view1', ['ui.router'])
 				  { id: 16, name: "Shirt", x: 67, y: 67, ST: 77, ET: 82, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
 				 { id: 36, name: "Sofa", x: 67, y: 33, ST: 77, ET: 82, imgURL: "sofa.jpg", redURL: sofaItem, price: 32000 },
 			     { id: 37, name: "Bhudha", x: 55, y: 30, ST: 77, ET: 82, imgURL: "budha.jpg", redURL: bhudhaItem, price: 4500 },
-				   { id: 3, x: 60, y: 63, name: "car", ST: 86, ET: 86, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
+				   { id: 3, x: 60, y: 63, name: "car", ST: 86, ET: 86, imgURL: "car.jpg", redURL: carItem, price: 100000 },
 
 
 				{ id: 38, name: "Saree", x: 50, y: 50, ST: 109, ET: 115, imgURL: "saree.jpg", redURL: sareeItem, price: 4500 },
@@ -193,7 +193,8 @@ angular.module('myApp.view1', ['ui.router'])
 	});
 
 	document.getElementById("MyVideo1").onplaying = function () {
-		$scope.isVisible = false;
+	    $scope.isVisible = false;
+	    $scope.isItemSelected = false;
 		$scope.$apply();
 	};
 	$scope.ShowItemsAvail = function (item) {
