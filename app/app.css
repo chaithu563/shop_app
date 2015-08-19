@@ -125,8 +125,8 @@ button {
 
 .modal {
   content: "";
- position:absolute;
-  background: rgba(0, 0, 0, 0.6);
+ /*position:absolute;*/
+  /*background: rgba(0, 0, 0, 0.6);*/
  color:blue;
   top: 0;
   left: 0;
@@ -139,7 +139,7 @@ button {
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
-  top: 15%;
+  top: 14%;
 }
 .modal-dialog {
   background: #fefefe;
@@ -150,7 +150,8 @@ button {
   /*left: 30%;*/
   top: -100%;
   z-index: 11;
-  width: 300px;
+  width: 11%;
+  /*height:25%;*/
   -webkit-transform: translate(0, -500%);
   -ms-transform: translate(0, -500%);
   transform: translate(0, -500%);
@@ -160,8 +161,8 @@ button {
   transition: transform 0.3s ease-out;
 }
 .modal-body {
-  /*padding: 20px;*/
- text-align:center
+  padding: 5%;
+ /*text-align:center*/
 }
 .modal-header,
 .modal-footer {
@@ -169,12 +170,15 @@ button {
 }
 .modal-header {
    display:inline;
- 
-
 }
 .modal-header h2 {
+    margin-top:0px;
     float:left;
   font-size: 20px;
+}
+.modal-header img {
+    float:right;
+
 }
 .modal-footer {
   border-top: #eeeeee solid 1px;

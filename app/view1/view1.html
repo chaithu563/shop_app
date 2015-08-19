@@ -8,21 +8,21 @@
      
             <div class="modal">
                 <div class="modal-dialog">
-                    <div class="modal-header" align="center">
+                    <span class="modal-header">
                         <h2>{{selectedItem.name}}</h2>
-                        <a ng-click="closeItemSelected()" class="close">×</a>
-               
-                    </div>
+                       <!-- <a ng-click="closeItemSelected()" class="close">+</a>-->
+                     <img  ng-click="closeItemSelected()" class="close" width="20" height="20" src="../app/img/close.png" alt="" />
+                    </span>
                     <div class="modal-body">
                       
-                        <img style="width:40%;height:40%;cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
-                        <h3>Price {{selectedItem.price }}</h3> 
-                        <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
-                    </div>
-                   <!-- <div class="modal-footer">
-                        <a href="#close" class="btn">Nice!</a>
+                        <img width="72" height="72" style="cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
                        
-                    </div>-->
+                    </div>
+                    <div class="modal-footer">
+                         <h5>Price {{selectedItem.price }}</h5> 
+                        <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
+                       
+                    </div>
                 </div>
             </div>
 

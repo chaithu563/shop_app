@@ -30,7 +30,7 @@ angular.module('myApp.view1', ['ui.router'])
 	var earringItem = "http://www.snapdeal.com/product/shinningdiva-aashiqui-2-earrings-in/516664782?utm_source=earth_feed&utm_campaign=6_341&utm_medium=102426941&vendorCode=S82cc7";
 
 	var items = [
-				{ id: 6, name: "cycle", x: 50, y: 43, ST: 7, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
+				{ id: 6, name: "cycle", x: 46, y: 40, ST: 7, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
                 { id: 1,x:40, y:47,name: "Blazer", ST: 11, ET: 13, imgURL: "Blazer.jpg", redURL: blazerItem, price: 10000 },
 				{ id: 7, name: "Car", x: 62, y: 11, ST: 11, ET: 13, imgURL: "car.jpg", redURL: carItem, price: 1000000 },
 			    { id: 8, name: "Glass", x: 24, y: 67, ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 10000 },
@@ -40,7 +40,7 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 19, name: "Tiles", x: 81, y: 34, ST: 14, ET: 15, imgURL: "Tiles.jpg", redURL: tileItem, price: 1110 },
 				 { id: 11, name: "Table", x: 66, y: 65, ST: 19, ET: 20, imgURL: "dinning.jpg", redURL: tableItem, price: 1000 },
 				 { id: 12, name: "Chair", x: 69, y: 10, ST: 19, ET: 20, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
-				 { id: 20, name: "Spectales", x: 30, y: 31, ST: 19, ET: 20, imgURL: "eyeglass.png", redURL: spectItem, price: 1300 },
+				 { id: 20, name: "Spectales", x: 30, y: 31, ST: 19, ET: 20, imgURL: "eyeglass.jpg", redURL: spectItem, price: 1300 },
 				 { id: 13, name: "Cup", x: 53, y: 71, ST: 19, ET: 20, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
 				 { id: 13, name: "Cup", x: 83, y: 52, ST: 21, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 1000 },
 				 { id: 17, name: "Shirt", x: 68, y: 46, ST: 21, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1200 },
@@ -265,7 +265,7 @@ angular.module('myApp.view1', ['ui.router'])
 
 	    //handle plus position
 
-		handlePlusForItems();
+		//handlePlusForItems();
 
 	});
 
