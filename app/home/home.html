@@ -24,14 +24,14 @@
 
             <div class="text-anim text-anim-5 logos-container animated">
              
-                <slick prev-arrow=".slick-prev" next-arrow=".slick-next" ng-if="dataLoaded" init-onload="true" infinite="true" data="items" dots="true" arrows="true" slides-to-show="3" slides-to-scroll="3">
+                <!--<slick prev-arrow=".slick-prev" next-arrow=".slick-next" ng-if="dataLoaded" init-onload="true" infinite="true" data="items" dots="true" arrows="true" slides-to-show="3" slides-to-scroll="3">-->
                  
                       <span  ng-repeat="item in items">
-                        <img style="width:20%;height:50%" src="{{ item.imgSrc }}"  alt="{{ item.label}}">
+					  	<img style="width:20%;height:50%;cursor:pointer" ng-click="gotoVideo()" src="{{ item.imgSrc }}" alt="{{ item.label}}">
                        </span>
-                    <button type="button" class="slick-prev" tabindex="-1" style="display: block;">Previous</button>
-                    <button type="button" class="slick-next" tabindex="-1" style="display: block;">Next</button>
-                </slick>
+                    <!--<button type="button" class="slick-prev" tabindex="-1" style="display: block;">Previous</button>
+                    <button type="button" class="slick-next" tabindex="-1" style="display: block;">Next</button>-->
+                <!--</slick>-->
 
             </div>
         </div>

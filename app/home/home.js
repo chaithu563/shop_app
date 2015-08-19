@@ -40,6 +40,11 @@ angular.module('myApp.home', ['ui.router'])
            { imgSrc: '../app/img/movie4.jpg', label: 'label 4' }
            // {imgSrc: '../app/img/movie5.jpg', label: 'label 4'}
     ]  
-//});
+	//});
+
+    $scope.gotoVideo = function () {
+    	$state.go("video", {}, { reload: true });
+    	$scope.$apply();
+    }
 
 }]);
