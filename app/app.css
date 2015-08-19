@@ -184,8 +184,11 @@ button {
   border-top: #eeeeee solid 1px;
   text-align: right;
   padding-top:0px;
+ background-color: rgba(165, 146, 42, 0.05);
 }
-
+.modal-footer h5{
+	margin:4px;
+}
 
 .close {
     float:right;
