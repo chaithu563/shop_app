@@ -198,14 +198,16 @@ angular.module('myApp.view1', ['ui.router'])
 		$scope.$apply();
 	};
 	$scope.ShowItemsAvail = function (item) {
-		video.pause();
-		$scope.playorpause = "play";
-		// Update the button text to 'Play'
-		//  playButton.innerHTML = "Play";
-		$scope.availItems = getAvailableItems();
-		$scope.isVisible = true;
-		$scope.opacityinorout = "in";
-		$scope.$apply();
+	    if ($scope.playorpause == "play") {
+	        video.pause();
+	        $scope.playorpause = "play";
+	        // Update the button text to 'Play'
+	        //  playButton.innerHTML = "Play";
+	        $scope.availItems = getAvailableItems();
+	        $scope.isVisible = true;
+	        $scope.opacityinorout = "in";
+	        $scope.$apply();
+	    }
 	}
 
 
