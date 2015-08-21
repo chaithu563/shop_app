@@ -4,69 +4,72 @@
 
     <div id="wrap_video">
 
-        <div class="item_overlays" ng-show="isItemSelected">
-     
-            <div class="modal">
-                <div class="modal-dialog">
-                    <div class="modal-header">
-                    <span>   <h2>{{selectedItem.name}}</h2>
-                       <!-- <a ng-click="closeItemSelected()" class="close">+</a>-->
-                     <img  ng-click="closeItemSelected()" class="close" width="20" height="20" src="../app/img/close.png" alt="" />
-                        </span> 
+
+
+        <div class="video_overlays" ng-show="isVisible">
+            <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
+                <img style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
+               
+            </div>
+             <div class="item_overlays" ng-style="{'position':'absolute' ,'top': selectedItem.x+15+'%' , 'left': selectedItem.y+7+'%'}" ng-show="isItemSelected">
+
+                    <div class="modal">
+                        <div class="modal-dialog" ng-style="{'top': (selectedItem.x/2)+'%'}">
+                            <div class="modal-header">
+                                <span>
+                                    <h2>{{selectedItem.name}}</h2>
+                                    <!-- <a ng-click="closeItemSelected()" class="close">+</a>-->
+                                    <img ng-click="closeItemSelected()" class="close" width="20" height="20" src="../app/img/close.png" alt="" />
+                                </span>
+                            </div>
+                            <div class="modal-body">
+
+                                <img width="100" height="100" style="cursor: pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
+
+                            </div>
+                            <div class="modal-footer">
+                                <h5>Price {{selectedItem.price }} /-</h5>
+                                <!--<img width="10" height="10" src="../app/img/indian-rupee.png" alt="" />-->
+                                <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
+
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                      
-                  <img width="100" height="100" style="cursor:pointer" ng-src="../app/img/shop_img/{{selectedItem.imgURL}}" />
-                       
-                    </div>
-                    <div class="modal-footer">
-                         <h5>Price {{selectedItem.price }} /-</h5> <!--<img width="10" height="10" src="../app/img/indian-rupee.png" alt="" />-->
-                        <button ng-click="openInNewWindow(selectedItem)">Buy Now</button>
-                       
-                    </div>
+
+
+
+
+
+
                 </div>
+
+        </div>
+
+        <div class="videodiv">
+
+            <video id="MyVideo1" class="opacity-{{opacityinorout}}">
+                <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
+            </video>
+
+            <div id="video-controls">
+                <img class="controlimg" title="select Item" src="../app/img/cart-icon.png" ng-click="ShowItemsAvail()" alt="" />
+
+                <img id="play-pause" class="controlimg" ng-src="../app/img/{{playorpause}}-icon.png" alt="" />
+
+                <input type="range" id="seek-bar" value="0">
+
+                <img id="mute" class="controlimg" ng-src="../app/img/{{muteorunmute}}-icon.png" alt="" />
+                <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
+
+                <img id="full-screen" title="Full screen" src="../app/img/FullScreen.png" class="controlimg" alt="" />
             </div>
 
-
-        
-
-
-
-        </div>
-
-    <div class="video_overlays" ng-show="isVisible">
-        <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
-			<img  style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
         </div>
 
 
     </div>
 
-    <div class="videodiv">
-
-        <video id="MyVideo1" class="opacity-{{opacityinorout}}">
-            <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
-        </video>
-
-        <div id="video-controls">
-            <img class="controlimg" title="select Item" src="../app/img/cart-icon.png" ng-click="ShowItemsAvail()" alt="" />
-
-            <img id="play-pause" class="controlimg" ng-src="../app/img/{{playorpause}}-icon.png" alt="" />
-
-            <input type="range" id="seek-bar" value="0">
-
-            <img id="mute" class="controlimg" ng-src="../app/img/{{muteorunmute}}-icon.png" alt="" />
-            <input type="range" id="volume-bar" min="0" max="1" step="0.1" value="1">
-
-            <img id="full-screen" title="Full screen" src="../app/img/FullScreen.png" class="controlimg" alt="" />
-        </div>
-
-    </div>
-
-
-</div>
-
-<br />
+    <br />
 
 
 
