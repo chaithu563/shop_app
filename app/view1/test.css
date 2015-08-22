@@ -1272,7 +1272,7 @@ div.paste-queue-error-handler div.error-handler-close:hover {
 .page-content {
     padding-top: 68px;
     -ms-overflow-style: none;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
     letter-spacing: 1px;
 }
 
