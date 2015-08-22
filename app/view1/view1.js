@@ -176,21 +176,30 @@ angular.module('myApp.view1', ['ui.router'])
 	var seekBar = document.getElementById("seek-bar");
 	var volumeBar = document.getElementById("volume-bar");
 
+	document.onkeypress = function (e) {
+	    if ((e || window.event).keyCode === 32) {
+	        handlePlayorPause();
+	    }
+	};
 
 	playButton.addEventListener("click", function () {
-		if (video.paused == true) {
-			// Play the video
-			video.play();
-			$scope.playorpause = "pause";
-
-		} else {
-			// Pause the video
-			video.pause();
-			$scope.playorpause = "play";
-		}
-		$scope.opacityinorout = "out";
-		$scope.$apply();
+	    handlePlayorPause();
 	});
+	function handlePlayorPause() {
+	    if (video.paused == true) {
+	        // Play the video
+	        video.play();
+	        $scope.playorpause = "pause";
+
+	    } else {
+	        // Pause the video
+	        video.pause();
+	        $scope.playorpause = "play";
+	        $scope.ShowItemsAvail();
+	    }
+	    $scope.opacityinorout = "out";
+	    $scope.$apply();
+	}
 
 	document.getElementById("MyVideo1").onplaying = function () {
 	    $scope.isVisible = false;
