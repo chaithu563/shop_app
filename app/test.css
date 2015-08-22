@@ -4808,6 +4808,7 @@ div.paste-queue-error-handler {
 
         .video-header .text-anim.animated {
             opacity: 1;
+          
         }
 
     .video-header h1, .video-header h2 {
@@ -4915,7 +4916,7 @@ div.paste-queue-error-handler {
         .video-header div.main-content-header button.slick-prev {
             cursor: pointer;
             opacity: .5;
-            background-image: url(/2015-07-29_13-39-05/images/carousel/header-carousel/CarouselL.svg);
+            background-image: url(http://www.wirewax.com/2015-07-29_13-39-05/images/carousel/header-carousel/CarouselL.svg);
         }
 
             .video-header div.main-content-header button.slick-prev:before {
@@ -4929,7 +4930,8 @@ div.paste-queue-error-handler {
         .video-header div.main-content-header button.slick-next {
             cursor: pointer;
             opacity: .5;
-            background-image: url(/2015-07-29_13-39-05/images/carousel/header-carousel/CarouselR.svg);
+            background-image: url(http://www.wirewax.com/2015-08-21_10-31-40/images/carousel/header-carousel/CarouselR.svg);
+          
         }
 
             .video-header div.main-content-header button.slick-next:before {
@@ -4966,20 +4968,20 @@ div.paste-queue-error-handler {
                     margin-top: 0;
                 }
 
-                .video-header div.main-content-header .slick-slide .logo-wrapper img.play-in-header-carousel {
+                img.play-in-header-carousel {
                     -webkit-transition: all .4s ease-out;
                     transition: all .4s ease-out;
                     width: 100%;
                     height: 90px;
-                    opacity: 0;
+                    opacity: 4;
                 }
 
-                .video-header div.main-content-header .slick-slide .logo-wrapper img.new-in-header-carousel {
+                img.new-in-header-carousel {
                     width: 100%;
                     margin-left: 5px;
                     height: 90px;
                     margin-top: -180px;
-                    opacity: 0;
+                    opacity: 4;
                 }
 
                 .video-header div.main-content-header .slick-slide .logo-wrapper:hover img.header-carousel-logo {
@@ -12076,7 +12078,7 @@ span.green-txt {
     margin-left: -291px;
     width: 782px;
     height: 153px;
-    left: 50%;
+    left: 10%;
     padding: 10px;
     overflow: visible;
 }
