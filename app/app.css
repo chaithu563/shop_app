@@ -6,7 +6,7 @@
     width: 100%;
     /*background-color: #4e7dd1;*/
     overflow: hidden;
-    background-color: rgba(25, 54, 62, 0.94);
+    background-color: #26292c;
     border-bottom: 1px solid #353535;
     text-shadow: none!important;
     text-transform: none!important;
@@ -54,7 +54,8 @@
     top: 10%;
     display: block;
     width: 100%;
-    background-image: url(../app/img/back.jpg);
+    /*background-image: url(../app/img/back.jpg);*/
+  background-color: rgb(26, 28, 29);
 }
 
 
@@ -171,10 +172,10 @@ button {
 .modal-header {
    display:inline;
 }
-.modal-header h2 {
+.modal-header span h2 {
     margin-top:0px;
     float:left;
-  font-size: 20px;
+  font-size: 22px;
 }
 .modal-header img {
     float:right;
@@ -214,8 +215,8 @@ button {
 
 .video_overlays {
     position: absolute;
-    width: 80%;
-    height:85%;
+    width: 85%;
+    height:90%;
     opacity: 1;
     z-index: 2;
     left: 0%;
@@ -235,8 +236,8 @@ button {
 	width:70%;
 }
 .videodiv{
-    width: 80%;
-    height:70%;
+    width: 85%;
+    height:80%;
 }
 
 #MyVideo1 {

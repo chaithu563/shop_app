@@ -23,19 +23,19 @@
         </h2>
         <div class="bottom-bits in-video-header">
 
-            <button type="button" data-role="none" class="slick-prev" style="display: block;">Previous</button>
+            <button type="button" data-role="none" ng-click="prevSlick()" class="slick-prev" style="display: block;">Previous</button>
 
             <div style="display: table-cell; vertical-align: middle;" class="text-anim text-anim-5 logos-container animated logo-wrapper">
 
 
                 <span ng-repeat="item in items">
-                    <img class="new-in-header-carousel" style="width: 20%; height: 50%; cursor: pointer" ng-click="gotoVideo()" src="{{ item.imgSrc }}" alt="{{ item.label}}">
+                    <img class="play-in-header-carousel" style="width: 20%; height: 50%; cursor: pointer" ng-click="gotoVideo()" src="{{ item.imgSrc }}" alt="{{ item.label}}">
                 </span>
 
 
             </div>
 
-            <button type="button" data-role="none" class="slick-next" style="display: block;">Next</button>
+            <button type="button" data-role="none" ng-click="nextSlick()" class="slick-next" style="display: block;">Next</button>
         </div>
 
 
