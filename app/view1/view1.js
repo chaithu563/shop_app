@@ -245,11 +245,12 @@ angular.module('myApp.view1', ['ui.router'])
 	// Event listener for the full-screen button
 	fullScreenButton.addEventListener("click", function () {
 		if (video.requestFullscreen) {
-			video.requestFullscreen();
+		    //video.requestFullscreen();
+
 		} else if (video.mozRequestFullScreen) {
 			video.mozRequestFullScreen(); // Firefox
 		} else if (video.webkitRequestFullscreen) {
-			video.webkitRequestFullscreen(); // Chrome and Safari
+			//video.webkitRequestFullscreen(); // Chrome and Safari
 		}
 	});
 
