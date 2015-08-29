@@ -33,5 +33,11 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
           templateUrl: 'home/home.html',
           controller: 'homeCtrl'
       })
+    $stateProvider
+      .state('video1', {
+          url: '/video1',
+          templateUrl: 'wirewax/wirewax.html'
+         
+      })
 
 }]);
