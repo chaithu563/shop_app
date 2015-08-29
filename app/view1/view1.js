@@ -242,7 +242,8 @@ angular.module('myApp.view1', ['ui.router'])
 	});
 
 
-	// Event listener for the full-screen button
+    // Event listener for the full-screen button
+	$scope.fullscrren = false;;
 	fullScreenButton.addEventListener("click", function () {
 		if (video.requestFullscreen) {
 		    //video.requestFullscreen();
@@ -252,6 +253,8 @@ angular.module('myApp.view1', ['ui.router'])
 		} else if (video.webkitRequestFullscreen) {
 			//video.webkitRequestFullscreen(); // Chrome and Safari
 		}
+		$scope.fullscrren = !$scope.fullscrren;
+		$scope.$apply();
 	});
 
 

@@ -1,12 +1,12 @@
-<div class="videocontent">
+<div ng-class="{'videocontent': !fullscrren , 'videocontentfs': fullscrren}" >
 
     <br />
 
-    <div id="wrap_video">
+    <div  ng-class="{'wrap_video': !fullscrren , 'wrap_videofs': fullscrren}" >
 
 
 
-        <div class="video_overlays" ng-show="isVisible">
+        <div  ng-class="{'video_overlays': !fullscrren , 'video_overlaysfs': fullscrren}"  ng-show="isVisible">
             <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
                 <img style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
                
@@ -45,13 +45,13 @@
 
         </div>
 
-        <div class="videodiv">
+        <div  ng-class="{'videodiv': !fullscrren , 'videodivfs': fullscrren}" >
 
             <video id="MyVideo1" class="opacity-{{opacityinorout}}">
                 <source src="../app/video/sreemanthudu.mp4" type="video/mp4">
             </video>
 
-            <div id="video-controls">
+            <div  ng-class="{'video-controls': !fullscrren , 'video-controlsfs': fullscrren}">
                <!-- <img class="controlimg" title="select Item" src="../app/img/cart-icon.png" ng-click="ShowItemsAvail()" alt="" />-->
 
                 <img id="play-pause" class="controlimg" ng-src="../app/img/{{playorpause}}-icon.png" ng-click="ShowItemsAvail()" alt="" />
