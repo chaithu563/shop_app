@@ -10,6 +10,7 @@ angular.module('myApp', [
   'ui.router',
   'myApp.view1',
   'myApp.home',
+   'myApp.admin',
    'myApp.service',
   'ui.bootstrap',
    'underscore',
@@ -37,7 +38,14 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
       .state('video1', {
           url: '/video1',
           templateUrl: 'wirewax/wirewax.html'
-         
-      })
+
+      });
+    $stateProvider
+     .state('admin', {
+         url: '/admin',
+         templateUrl: 'admin/admin.html',
+         controller: 'adminCtrl'
+
+     })
 
 }]);
