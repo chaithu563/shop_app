@@ -6,12 +6,46 @@
 
 .admVideoDiv{
     margin-top:5%;
-    margin-left:5%;
+    margin-left:2%;
+    margin-right:3%;
     float:left;
-    width:70%;
+    width:60%;
 
 }
-.admItemAdd{
-    width:25%;
-    float:right;
+.admItemAdd {
+    width: 30%;
+    float: right;
+    margin-top: 5%;
+    margin-left:5%;
+}
+.button-add-div{
+    width:60%;
+
+}
+.admin-add-button{
+    width:70%;
+    margin-left:10%;
+        border-color: #d3d3d3;
+    background: #f8f8f8;
+    color: #333;
+    display: inline-block;
+    height: 28px;
+    border: solid 1px transparent;
+    padding: 0 10px;
+    outline: 0;
+    font-weight: 500;
+    font-size: 11px;
+    text-decoration: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    line-height: normal;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+
+.item-name-div{
+    margin-top:3%;
+
 }
