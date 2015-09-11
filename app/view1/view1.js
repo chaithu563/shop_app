@@ -2,32 +2,32 @@
 angular.module('myApp.view1', ['ui.router'])
 
 .controller('View1Ctrl', ['$state', '$scope', 'dataServices', '$http', '$window', '_', function ($state, $scope, dataServices, $http, $window, _) {
-	var blazerItem = "http://www.flipkart.com/protext-premium-solid-single-breasted-formal-men-s-blazer/p/itme5sh4tfxhf8hg?pid=BZRE5SH4C8PQMMWM&ref=L%3A-2203174991299721304&srno=p_31&query=blazer&otracker=from-search";
-	var carItem = "http://www.zigwheels.com/newcars/Hyundai/Creta";
-	var capItem = "http://www.flipkart.com/cravers-premium-solid-snapback-cap/p/itme5tpvrzmkgq6n?pid=CAPE5TPVUUCMADYY&ref=L%3A7670444542371712963&srno=p_2&query=cap&otracker=from-search";
+    var blazerItem = "http://gayamstore.myshopify.com/products/black-blazer";
+	var carItem = "http://gayamstore.myshopify.com/products/car";
+	var capItem = "http://gayamstore.myshopify.com/products/cap";
 	var DiningItem = "http://www.pepperfry.com/two-seater-dining-set-in-white-colour-by-ventura-1265359.html?type=sel";
-	var CycleItem = "http://www.snapdeal.com/product/btwin-my-bike-7s-mountain/466642201#bcrumbLabelId:280";
-	var glassItem = "http://www.snapdeal.com/product/krm-moonstone-straight-shelf-10x5/100199843#bcrumbSearch:glass";
-	var tableItem = "http://www.snapdeal.com/product/study-table-with-3-drawers/884763667";
-	var chairItem = "http://www.snapdeal.com/product/divano-modular-black-metal-office/1301325749";
-	var cupItem = "http://www.amazon.com/Stainless-Steel-Sauce-Condiment-Cups/dp/B000K9WTN2";
-	var shirtItem = "http://www.amazon.com/Russell-Athletic-Basic-T-Shirt-XXX-Large/dp/B00076ZRC8/ref=sr_1_1?ie=UTF8&qid=1439295413&sr=8-1&keywords=t+shirt";
-	//var shirtItem = "http://www.amazon.com/Russell-Athletic-Basic-T-Shirt-XXX-Large/dp/B00076ZRC8/ref=sr_1_1?ie=UTF8&qid=1439295413&sr=8-1&keywords=t+shirt";
-	var mentradItem = "http://shopping.indiatimes.com/fashion/ethnic-wear/bodyline-cream-men-kurta-pyjama-rk4028/43969/p_B2697112";
-	var spectItem = "http://www.lenskart.com/vincent-chase-vc-0315-gunmetal-grey-black-doy2-eyeglasses.html";
-	var wallDocrItem = "http://www.snapdeal.com/product/aquire-pvc-wall-stickers/638522664252";
-	var ladiesDressItem1 = "http://www.stalkbuylove.com/little-black-dress-16.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vcUjYJOgbK6VSeIMogd4WsdV-WjAfaI278oFn5F_MdMaAn4z8P8HAQ";
-	var menStoleItem = "http://www.snapdeal.com/product/craftshub-exclusive-orange-colour-stripes/785291024";
-	var tileItem = "http://www.pepperfry.com/homefurry-beige-glossy-tiles-bath-mat-1192276.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vUqv9qnXnsjWmqdxwz8O6n62cAjUHY3UuNoTOp1NrBwaAuIW8P8HAQ";
-	var poojaItems = "http://www.grtjewels.com/products/jewellery/collections/pooja-collections/kothu-kinnam";
-	var goldRingItem = "http://www.bluestone.com/rings/the-heroic-soldier-ring~2793.html?land=true&gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vRDJB3zuji3PcZ_PMCx93Heb6SK-o8-1-_mn9vGph3oaAr6X8P8HAQ&dclid=CPvVpue7pccCFUGFaAod5_UHLw";
-	var watchItem = "http://www.amazon.in/Timex-Classic-Analog-Gold-Watch/dp/B00CL52VNG?tag=googinhydr18418-21&tag=googinkenshoo-21&ascsubtag=764cda5a-6597-47db-9066-f1f24e9b5406&kpid=B00CL52VNG";
-	var chainItem = "http://www.snapdeal.com/product/magic-stones-18-carat-gold/675042370636?utm_source=earth_feed&utm_campaign=6_49&utm_medium=101343078&vendorCode=S5ea0b";
-	var phoneUrl = "http://www.askmebazaar.com/product.php?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vcqd9kCRAeiXguxQk8O-Dwtqgq5vWuH7kuRo2Ef4FigaAl2e8P8HAQ&app_data=cHJvZHVjdF9pZD00OTUwMCZzdG9yZV9mcm9udF9pZD0yMTEmZGVhbHNndXJ1PTE=&ef_id=Va34TgAAATwvX8Te:20150813065426:s";
-	var sofaItem = "http://www.pepperfry.com/alia-modular-sofa-sectional-2-corner-1-1-seater-in-black-colour-by-furny-1266366.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vWhWI0z1DJUoHdqta2jwDgAyQ7CT57_tWcL39HtnMGIaAsSC8P8HAQ";
-	var bhudhaItem = "http://www.at-home.co.in/decor/olive-buddha-face-showpiece-home-nilkamal/p-7273534-52917894305-cat.html?gclid=Cj0KEQjw3auuBRDj1LnQyLjy-4sBEiQAKPU_vd-pQ-1BZZyUhTHDjEwJeV8Np0zIftUaRrbl0l3yjvgaAkrE8P8HAQ";
-	var sareeItem = "http://www.jabong.com/Ambica-Green-Printed-Saree-1519170.html?pos=65";
-	var earringItem = "http://www.snapdeal.com/product/shinningdiva-aashiqui-2-earrings-in/516664782?utm_source=earth_feed&utm_campaign=6_341&utm_medium=102426941&vendorCode=S82cc7";
+	var CycleItem = "http://gayamstore.myshopify.com/products/cycle";
+	var glassItem = "http://gayamstore.myshopify.com/products/construction-glass";
+	var tableItem = "http://gayamstore.myshopify.com/products/office-table";
+	var chairItem = "http://gayamstore.myshopify.com/products/office-chair";
+	var cupItem = "http://gayamstore.myshopify.com/products/cup";
+	var shirtItem = "http://gayamstore.myshopify.com/products/men-t-shirt";
+	
+	var mentradItem = "http://gayamstore.myshopify.com/products/men-traditional-dress";
+	var spectItem = "http://gayamstore.myshopify.com/products/spectacles";
+	var wallDocrItem = "http://gayamstore.myshopify.com/products/wall-decorator";
+	var ladiesDressItem1 = "http://gayamstore.myshopify.com/products/ladies-party-dress";
+	var menStoleItem = "http://gayamstore.myshopify.com/products/men-stole";
+	var tileItem = "http://gayamstore.myshopify.com/products/tiles";
+	var poojaItems = "http://gayamstore.myshopify.com/products/pooja-items";
+	var goldRingItem = "http://gayamstore.myshopify.com/products/gold-ring";
+	var watchItem = "http://gayamstore.myshopify.com/products/watch";
+	var chainItem = "http://gayamstore.myshopify.com/products/gold-chain";
+	var phoneUrl = "http://gayamstore.myshopify.com/products/iphone-4s";
+	var sofaItem = "http://gayamstore.myshopify.com/products/sofa";
+	var bhudhaItem = "http://gayamstore.myshopify.com/products/bhudha-item";
+	var sareeItem = "http://gayamstore.myshopify.com/products/saree";
+	var earringItem = "http://gayamstore.myshopify.com/products/ear-ring";
 
 	var items = [
 				{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
