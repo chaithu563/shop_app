@@ -42,7 +42,7 @@ angular.module('myApp.home', ['ui.router'])
         vidReady++;
         if (vidReady == 2)
             vidReady = 0;
-        $scope.$apply();
+       // $scope.$apply();
     }, 1000 * 3);
     $scope.number = 1;
 
