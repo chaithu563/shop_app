@@ -72,10 +72,10 @@ angular.module('myApp.view1', ['ui.router'])
 
 
 
-				 { id: 32, name: "Ring", x: 37, y: 66, ST: 61, ET: 62, imgURL: "goldring.jpg", redURL: menStoleItem, price: 10000 },
-				 { id: 33, name: "Watch", x: 73, y: 75, ST: 61, ET: 62, imgURL: "watch.jpg", redURL: menStoleItem, price: 23000 },
-			     { id: 34, name: "Chain", x: 74, y: 43, ST: 61, ET: 62, imgURL: "goldchain.jpg", redURL: menStoleItem, price: 14000 },
-				 { id: 35, name: "Phone", x: 50, y: 56, ST: 61, ET: 62, imgURL: "phone.jpg", redURL: menStoleItem, price: 21000 },
+				 { id: 32, name: "Ring", x: 37, y: 66, ST: 61, ET: 62, imgURL: "goldring.jpg", redURL: goldRingItem, price: 10000 },
+				 { id: 33, name: "Watch", x: 73, y: 75, ST: 61, ET: 62, imgURL: "watch.jpg", redURL: watchItem, price: 23000 },
+			     { id: 34, name: "Chain", x: 74, y: 43, ST: 61, ET: 62, imgURL: "goldchain.jpg", redURL: chainItem, price: 14000 },
+				 { id: 35, name: "Phone", x: 50, y: 56, ST: 61, ET: 62, imgURL: "phone.jpg", redURL: phoneUrl, price: 21000 },
 
 
 				  { id: 16, name: "Shirt", x: 67, y: 67, ST: 77, ET: 82, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
