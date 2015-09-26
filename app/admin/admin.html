@@ -6,7 +6,7 @@
 
             <div class="admin_video_overlays" ng-show="true">
                 <!-- ng-class="all-overlays overlay-image overlay-1 out"-->
-                <div  ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" my-draggable="{{item}}">
+                <div  ng-repeat="item in availItems" ng-style="{'position':'absolute' }" my-draggable="{{item}}">
                     <img style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
                 </div>
 
@@ -62,6 +62,12 @@
                     <label>Item Provider</label><input type="text" ng-model="selectedItem.redURL" />
                 </div>
 
+                 <div class="each-item-div">
+                    <label>Item Top</label><input type="text" ng-model="selectedItem.x" />
+                </div>
+                <div class="each-item-div">
+                    <label>Item Left</label><input type="text" ng-model="selectedItem.y" />
+                </div>
 
             </div>
         </div>
