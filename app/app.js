@@ -15,7 +15,7 @@ angular.module('myApp', [
   'ui.bootstrap',
    'underscore',
    'ngResource',
-   'myApp.directives'
+   'myApp.component'
   
 ]).
 

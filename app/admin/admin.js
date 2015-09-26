@@ -5,35 +5,35 @@ angular.module('myApp.admin', ['ui.router'])
   
     //{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 29000 },
 
-    var blazerItem = "http://gayamstore.myshopify.com/products/black-blazer";
-    var carItem = "http://gayamstore.myshopify.com/products/car";
-    var capItem = "http://gayamstore.myshopify.com/products/cap";
+    var blazerItem = "http://happiepug.com/products/black-blazer";
+    var carItem = "http://happiepug.com/products/car";
+    var capItem = "http://happiepug.com/products/cap";
     var DiningItem = "http://www.pepperfry.com/two-seater-dining-set-in-white-colour-by-ventura-1265359.html?type=sel";
-    var CycleItem = "http://gayamstore.myshopify.com/products/cycle";
-    var glassItem = "http://gayamstore.myshopify.com/products/construction-glass";
-    var tableItem = "http://gayamstore.myshopify.com/products/office-table";
-    var chairItem = "http://gayamstore.myshopify.com/products/office-chair";
-    var cupItem = "http://gayamstore.myshopify.com/products/cup";
-    var shirtItem = "http://gayamstore.myshopify.com/products/men-t-shirt";
+    var CycleItem = "http://happiepug.com/products/cycle";
+    var glassItem = "http://happiepug.com/products/construction-glass";
+    var tableItem = "http://happiepug.com/products/office-table";
+    var chairItem = "http://happiepug.com/products/office-chair";
+    var cupItem = "http://happiepug.com/products/cup";
+    var shirtItem = "http://happiepug.com/products/men-t-shirt";
 
-    var mentradItem = "http://gayamstore.myshopify.com/products/men-traditional-dress";
-    var spectItem = "http://gayamstore.myshopify.com/products/spectacles";
-    var wallDocrItem = "http://gayamstore.myshopify.com/products/wall-decorator";
-    var ladiesDressItem1 = "http://gayamstore.myshopify.com/products/ladies-party-dress";
-    var ladiesDressItem2 = "http://gayamstore.myshopify.com/products/punjabee-dress";
-    var ladiesDressItem3 = "http://gayamstore.myshopify.com/products/punjabee-dress";
+    var mentradItem = "http://happiepug.com/products/men-traditional-dress";
+    var spectItem = "http://happiepug.com/products/spectacles";
+    var wallDocrItem = "http://happiepug.com/products/wall-decorator";
+    var ladiesDressItem1 = "http://happiepug.com/products/ladies-party-dress";
+    var ladiesDressItem2 = "http://happiepug.com/products/punjabee-dress";
+    var ladiesDressItem3 = "http://happiepug.com/products/punjabee-dress";
 
-    var menStoleItem = "http://gayamstore.myshopify.com/products/men-stole";
-    var tileItem = "http://gayamstore.myshopify.com/products/tiles";
-    var poojaItems = "http://gayamstore.myshopify.com/products/pooja-items";
-    var goldRingItem = "http://gayamstore.myshopify.com/products/gold-ring";
-    var watchItem = "http://gayamstore.myshopify.com/products/watch";
-    var chainItem = "http://gayamstore.myshopify.com/products/gold-chain";
-    var phoneUrl = "http://gayamstore.myshopify.com/products/iphone-4s";
-    var sofaItem = "http://gayamstore.myshopify.com/products/sofa";
-    var bhudhaItem = "http://gayamstore.myshopify.com/products/bhudha-item";
-    var sareeItem = "http://gayamstore.myshopify.com/products/saree";
-    var earringItem = "http://gayamstore.myshopify.com/products/ear-ring";
+    var menStoleItem = "http://happiepug.com/products/men-stole";
+    var tileItem = "http://happiepug.com/products/tiles";
+    var poojaItems = "http://happiepug.com/products/pooja-items";
+    var goldRingItem = "http://happiepug.com/products/gold-ring";
+    var watchItem = "http://happiepug.com/products/watch";
+    var chainItem = "http://happiepug.com/products/gold-chain";
+    var phoneUrl = "http://happiepug.com/products/iphone-4s";
+    var sofaItem = "http://happiepug.com/products/sofa";
+    var bhudhaItem = "http://happiepug.com/products/bhudha-item";
+    var sareeItem = "http://happiepug.com/products/saree";
+    var earringItem = "http://happiepug.com/products/ear-ring";
 
     var items = [
 				{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 34000 },

@@ -6,7 +6,7 @@
 
             <div class="admin_video_overlays" ng-show="true">
                 <!-- ng-class="all-overlays overlay-image overlay-1 out"-->
-                <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}">
+                <div  ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" my-draggable="{{item}}">
                     <img style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
                 </div>
 
@@ -36,8 +36,8 @@
         </div>
 
         <div class="admItemAdd">
-
-            <div class="addeditbuttons">
+           <!-- <span my-test>Drag ME</span><my-test my-draggable> myaname </my-test> -->
+            <div class="addeditbuttons" >
                 <div class="button-add-div">
                     <button class="admin-add-button" type="button" onclick=";return false;" id="annotator-button-add" data-button-menu-id="annotator-add-menu" aria-pressed="false" aria-expanded="false">
                         <span style="font-size: large; margin-right: 20%">+</span><span style="font-size: medium">Add</span>
