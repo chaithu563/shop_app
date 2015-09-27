@@ -2,35 +2,35 @@
 angular.module('myApp.view1', ['ui.router'])
 
 .controller('View1Ctrl', ['$state', '$scope', 'dataServices', '$http', '$window', '_', function ($state, $scope, dataServices, $http, $window, _) {
-    var blazerItem = "http://happiepug.com/products/black-blazer";
-	var carItem = "http://happiepug.com/products/car";
-	var capItem = "http://happiepug.com/products/cap";
+    var blazerItem = "http://www.happiepug.com/products/black-blazer";
+	var carItem = "http://www.happiepug.com/products/car";
+	var capItem = "http://www.happiepug.com/products/cap";
 	var DiningItem = "http://www.pepperfry.com/two-seater-dining-set-in-white-colour-by-ventura-1265359.html?type=sel";
-	var CycleItem = "http://happiepug.com/products/cycle";
-	var glassItem = "http://happiepug.com/products/construction-glass";
-	var tableItem = "http://happiepug.com/products/office-table";
-	var chairItem = "http://happiepug.com/products/office-chair";
-	var cupItem = "http://happiepug.com/products/cup";
-	var shirtItem = "http://happiepug.com/products/men-t-shirt";
+	var CycleItem = "http://www.happiepug.com/products/cycle";
+	var glassItem = "http://www.happiepug.com/products/construction-glass";
+	var tableItem = "http://www.happiepug.com/products/office-table";
+	var chairItem = "http://www.happiepug.com/products/office-chair";
+	var cupItem = "http://www.happiepug.com/products/cup";
+	var shirtItem = "http://www.happiepug.com/products/men-t-shirt";
 	
-	var mentradItem = "http://happiepug.com/products/men-traditional-dress";
-	var spectItem = "http://happiepug.com/products/spectacles";
-	var wallDocrItem = "http://happiepug.com/products/wall-decorator";
-	var ladiesDressItem1 = "http://happiepug.com/products/ladies-party-dress";
-	var ladiesDressItem2 = "http://happiepug.com/products/punjabee-dress";
-	var ladiesDressItem3 = "http://happiepug.com/products/punjabee-dress";
+	var mentradItem = "http://www.happiepug.com/products/men-traditional-dress";
+	var spectItem = "http://www.happiepug.com/products/spectacles";
+	var wallDocrItem = "http://www.happiepug.com/products/wall-decorator";
+	var ladiesDressItem1 = "http://www.happiepug.com/products/ladies-party-dress";
+	var ladiesDressItem2 = "http://www.happiepug.com/products/punjabee-dress";
+	var ladiesDressItem3 = "http://www.happiepug.com/products/punjabee-dress";
 
-	var menStoleItem = "http://happiepug.com/products/men-stole";
-	var tileItem = "http://happiepug.com/products/tiles";
-	var poojaItems = "http://happiepug.com/products/pooja-items";
-	var goldRingItem = "http://happiepug.com/products/gold-ring";
-	var watchItem = "http://happiepug.com/products/watch";
-	var chainItem = "http://happiepug.com/products/gold-chain";
-	var phoneUrl = "http://happiepug.com/products/iphone-4s";
-	var sofaItem = "http://happiepug.com/products/sofa";
-	var bhudhaItem = "http://happiepug.com/products/bhudha-item";
-	var sareeItem = "http://happiepug.com/products/saree";
-	var earringItem = "http://happiepug.com/products/ear-ring";
+	var menStoleItem = "http://www.happiepug.com/products/men-stole";
+	var tileItem = "http://www.happiepug.com/products/tiles";
+	var poojaItems = "http://www.happiepug.com/products/pooja-items";
+	var goldRingItem = "http://www.happiepug.com/products/gold-ring";
+	var watchItem = "http://www.happiepug.com/products/watch";
+	var chainItem = "http://www.happiepug.com/products/gold-chain";
+	var phoneUrl = "http://www.happiepug.com/products/iphone-4s";
+	var sofaItem = "http://www.happiepug.com/products/sofa";
+	var bhudhaItem = "http://www.happiepug.com/products/bhudha-item";
+	var sareeItem = "http://www.happiepug.com/products/saree";
+	var earringItem = "http://www.happiepug.com/products/ear-ring";
 
 	var items = [
 				{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 34000 },
