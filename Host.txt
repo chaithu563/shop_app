@@ -35,3 +35,5 @@ http://www.softbank.jp/en/
 http://www.innovid.com/
 https://studio.wirewax.com/#/studio/videos
 
+https://gayamstore.myshopify.com/admin/products/2466588099.json
+https://gayamstore.myshopify.com/admin/products/2464999811/images.json
