@@ -5,19 +5,21 @@ angular.module('myApp.view1', ['ui.router'])
     var blazerItem = "http://www.happiepug.com/products/black-blazer";
 	var carItem = "http://www.happiepug.com/products/car";
 	var capItem = "http://www.happiepug.com/products/cap";
-	var DiningItem = "http://www.pepperfry.com/two-seater-dining-set-in-white-colour-by-ventura-1265359.html?type=sel";
+	var DiningItem = "http://www.happiepug.com/products/outdoor-dining";
 	var CycleItem = "http://www.happiepug.com/products/cycle";
 	var glassItem = "http://www.happiepug.com/products/construction-glass";
 	var tableItem = "http://www.happiepug.com/products/office-table";
 	var chairItem = "http://www.happiepug.com/products/office-chair";
 	var cupItem = "http://www.happiepug.com/products/cup";
 	var shirtItem = "http://www.happiepug.com/products/men-t-shirt";
-	
+	var khakipantItem = "http://www.happiepug.com/products/khaki-pant";
+	var blackshirtItem = "http://www.happiepug.com/products/men-shirt";
+	var golfshirtItem = "http://www.happiepug.com/products/golf-shirt";
 	var mentradItem = "http://www.happiepug.com/products/men-traditional-dress";
 	var spectItem = "http://www.happiepug.com/products/spectacles";
 	var wallDocrItem = "http://www.happiepug.com/products/wall-decorator";
 	var ladiesDressItem1 = "http://www.happiepug.com/products/ladies-party-dress";
-	var ladiesDressItem2 = "http://www.happiepug.com/products/punjabee-dress";
+	var ladiesDressItem2 = "http://www.happiepug.com/products/ladies-white-dress";
 	var ladiesDressItem3 = "http://www.happiepug.com/products/punjabee-dress";
 
 	var menStoleItem = "http://www.happiepug.com/products/men-stole";
@@ -39,12 +41,13 @@ angular.module('myApp.view1', ['ui.router'])
 			    { id: 8, name: "Glass", x: 24, y: 67, ST: 11, ET: 15, imgURL: "glass.jpg", redURL: glassItem, price: 1200 },
 				 { id: 9, name: "Table", x: 70, y: 79, ST: 14, ET: 15, imgURL: "table.jpg", redURL: tableItem, price: 23000 },
 				 { id: 10, name: "Chair", x: 71, y: 64, ST: 14, ET: 15, imgURL: "chair.jpg", redURL: chairItem, price: 2500 },
-				  { id: 18, name: "Shirt", x: 50, y: 50, ST: 14, ET: 15, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
-				 { id: 19, name: "Tiles", x: 81, y: 34, ST: 14, ET: 15, imgURL: "Tiles.jpg", redURL: tileItem, price: 250 },
-				 { id: 11, name: "Table", x: 66, y: 65, ST: 19, ET: 20, imgURL: "dinning.jpg", redURL: DiningItem, price: 1001 },
+				  { id: 18, name: "Shirt", x: 50, y: 50, ST: 14, ET: 15, imgURL: "shirt1.jpg", redURL: blackshirtItem, price: 1100 },
+                   { id: 18, name: "khaki fant", x: 70, y: 50, ST: 14, ET: 15, imgURL: "khaki-pant1.jpg", redURL: khakipantItem, price: 1100 },
+				 { id: 19, name: "Carpet", x: 81, y: 34, ST: 14, ET: 15, imgURL: "carpet.jpg", redURL: tileItem, price: 250 },
+				 { id: 11, name: "Dinning", x: 66, y: 65, ST: 19, ET: 20, imgURL: "dinning.jpg", redURL: DiningItem, price: 1001 },
 				 //{ id: 12, name: "Chair", x: 69, y: 10, ST: 19, ET: 20, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
 				 { id: 20, name: "Spectales", x: 30, y: 31, ST: 19, ET: 20, imgURL: "eyeglass.jpg", redURL: spectItem, price: 1100 },
-				 { id: 13, name: "Cup", x: 53, y: 71, ST: 19, ET: 20, imgURL: "cup.jpg", redURL: cupItem, price: 450 },
+				 { id: 12, name: "Cup", x: 53, y: 71, ST: 19, ET: 20, imgURL: "cup.jpg", redURL: cupItem, price: 450 },
 				 { id: 13, name: "Cup", x: 83, y: 52, ST: 21, ET: 24, imgURL: "cup.jpg", redURL: cupItem, price: 450 },
 				 { id: 17, name: "Shirt", x: 68, y: 46, ST: 21, ET: 24, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
 				 //{ id: 12, name: "Chair", x: 69, y: 20, ST: 21, ET: 24, imgURL: "chair.jpg", redURL: chairItem, price: 1000 },
@@ -56,7 +59,7 @@ angular.module('myApp.view1', ['ui.router'])
 				 { id: 4, x: 59, y: 11, name: "Dinning", ST: 35, ET: 37, imgURL: "dinning2.jpg", redURL: DiningItem, price: 19000 },
 				 { id: 14, name: "Cup", x: 74, y: 32, ST: 35, ET: 37, imgURL: "cup.jpg", redURL: cupItem, price: 450 },
 			     { id: 2, x: 20, y: 34, name: "Cap", ST: 39, ET: 40, imgURL: "cap.jpg", redURL: capItem, price: 1003 },
-			     { id: 21, name: "Shirt", x: 52, y: 32, ST: 39, ET: 40, imgURL: "golf-shirt.jpg", redURL: shirtItem, price: 1100 },
+			     { id: 21, name: "Shirt", x: 52, y: 32, ST: 39, ET: 40, imgURL: "golf-shirt.jpg", redURL: golfshirtItem, price: 1100 },
 				 { id: 15, name: "Shirt", x: 48, y: 29, ST: 41, ET: 42, imgURL: "shirt.jpg", redURL: shirtItem, price: 1100 },
 				 { id: 25, name: "Dress", x: 56, y: 43, ST: 41, ET: 42, imgURL: "ladiesdress2.jpg", redURL: ladiesDressItem2, price: 2400 },
 				 { id: 26, name: "Dress", x: 53, y: 63, ST: 41, ET: 42, imgURL: "ladiesdress3.jpg", redURL: ladiesDressItem3, price: 2400 },

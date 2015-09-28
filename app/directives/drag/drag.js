@@ -61,8 +61,8 @@
                    //var top = ((element[0].offsetParent.offsetHeight - finalPositiontop) * 100) / element[0].offsetParent.offsetHeight;
                    //var left = ((element[0].offsetParent.offsetWidth - finalPositionleft) * 100) / element[0].offsetParent.offsetWidth;
 
-                   var top = ((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight;
-                   var left = ((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth;
+                   var top =Math.round( ((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight);
+                   var left = Math.round(((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth);
                    scope.item.x = top;
                    scope.item.y = left;
                }
