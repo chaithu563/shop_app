@@ -28,8 +28,8 @@
                    border: '1px solid red',
                    backgroundColor: 'lightgrey',
                    cursor: 'pointer',
-                   top: topPer + 'px',
-                   left:leftPer + 'px'
+                   top: scope.item.x + '%',
+                   left: scope.item.y + '%'
                });
              
                element.on('mousedown', function(event) {
@@ -55,16 +55,19 @@
                    $document.off('mousemove', mousemove);
                    $document.off('mouseup', mouseup);
                    //handle top left
-                   var finalPositiontop = element[0].attributes["style"].value.split(';')[3].split(':')[1].replace("px","");
-                   var finalPositionleft = element[0].attributes["style"].value.split(';')[4].split(':')[1].replace("px", "");
+                   var finalPositiontop = element[0].attributes["style"].value.split(';')[3].split(':')[1].replace("px", "").replace("%", "").replace(" ", "");
+                   var finalPositionleft = element[0].attributes["style"].value.split(';')[4].split(':')[1].replace("px", "").replace("%", "").replace(" ", "");
 
-                   //var top = ((element[0].offsetParent.offsetHeight - finalPositiontop) * 100) / element[0].offsetParent.offsetHeight;
-                   //var left = ((element[0].offsetParent.offsetWidth - finalPositionleft) * 100) / element[0].offsetParent.offsetWidth;
+                  
 
                    var top =Math.round( ((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight);
                    var left = Math.round(((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth);
-                   scope.item.x = top;
-                   scope.item.y = left;
+                   scope.item.x = element[0].attributes["style"].value.split(';')[3].split(':')[1].indexOf("%")>-1 ? finalPositiontop :top ;
+                   scope.item.y = element[0].attributes["style"].value.split(';')[4].split(':')[1].indexOf("%")>-1 ? finalPositionleft :left ;
+                   element.css({
+                       top: scope.item.x + '%',
+                       left: scope.item.y + '%'
+                   });
                }
            }
 
