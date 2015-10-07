@@ -45,9 +45,18 @@
                function mousemove(event) {
                    y = event.pageY - startY;
                    x = event.pageX - startX;
+                  
+                   var finalPositiontop = element[0].attributes["style"].value.split(';')[3].split(':')[1].replace("px", "").replace("%", "").replace(" ", "");
+                   var finalPositionleft = element[0].attributes["style"].value.split(';')[4].split(':')[1].replace("px", "").replace("%", "").replace(" ", "");
+
+
+
+                   var top = Math.round(((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight);
+                   var left = Math.round(((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth);
+                   if(top+1>=0&&left+1>=0&&top-1<=100 && left-1<=100)
                    element.css({
                        top: y + 'px',
-                       left:  x + 'px'
+                       left: x + 'px'
                    });
                }
 
@@ -63,7 +72,8 @@
                    var top =Math.round( ((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight);
                    var left = Math.round(((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth);
                    scope.item.x = element[0].attributes["style"].value.split(';')[3].split(':')[1].indexOf("%")>-1 ? finalPositiontop :top ;
-                   scope.item.y = element[0].attributes["style"].value.split(';')[4].split(':')[1].indexOf("%")>-1 ? finalPositionleft :left ;
+                   scope.item.y = element[0].attributes["style"].value.split(';')[4].split(':')[1].indexOf("%") > -1 ? finalPositionleft : left;
+                   if (scope.item.x >= 0 && scope.item.y >= 0 && scope.item.x <= 100 && scope.item.y <= 100)
                    element.css({
                        top: scope.item.x + '%',
                        left: scope.item.y + '%'
