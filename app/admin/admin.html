@@ -68,6 +68,12 @@
                 <div class="each-item-div">
                     <label>Item Left</label><input type="text" ng-model="selectedItem.y" />
                 </div>
+				<div class="each-item-div">
+					<button ng-click="selectedItem.ST=currentTime">Set StartTime</button><input type="text" ng-model="selectedItem.ST" />
+				</div>
+				<div class="each-item-div">
+					<button ng-click="selectedItem.ET=currentTime">Set EndTime</button><input type="text" ng-model="selectedItem.ET" />
+				</div>
 
             </div>
         </div>

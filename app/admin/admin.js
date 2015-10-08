@@ -54,8 +54,8 @@ angular.module('myApp.admin', ['ui.router'])
 				 { id: 27, name: "Men Dress", x: 52, y: 76, ST: 25, ET: 26, imgURL: "menstraditional.jpg", redURL: mentradItem, price: 11000 },
 				 { id: 28, name: "Mens Stole", x: 35, y: 33, ST: 25, ET: 26, imgURL: "mensstole.jpg", redURL: menStoleItem, price: 1600 },
 				 { id: 29, name: "Pooja Items", x: 85, y: 45, ST: 29, ET: 30, imgURL: "poojaitems.jpg", redURL: poojaItems, price: 11000 },
-				 { id: 22, name: "Wall Decor", x: 45, y: 80, ST: 35, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 1200 },
-				 { id: 23, name: "Dress", x: 49, y: 65, ST: 35, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 2400 },
+				 { id: 22, name: "Wall Decor", x: 45, y: 80, ST: 35.5, ET: 37, imgURL: "Wall-Decor.jpg", redURL: wallDocrItem, price: 1200 },
+				 { id: 23, name: "Dress", x: 49, y: 65, ST: 35.5, ET: 37, imgURL: "ladiesdress1.jpg", redURL: ladiesDressItem1, price: 2400 },
 				 { id: 4, x: 59, y: 11, name: "Dinning", ST: 35, ET: 37, imgURL: "dinning2.jpg", redURL: DiningItem, price: 19000 },
 				 { id: 14, name: "Cup", x: 74, y: 32, ST: 35, ET: 37, imgURL: "cup.jpg", redURL: cupItem, price: 450 },
 			     { id: 2, x: 20, y: 34, name: "Cap", ST: 39, ET: 40, imgURL: "cap.jpg", redURL: capItem, price: 1003 },
@@ -76,7 +76,7 @@ angular.module('myApp.admin', ['ui.router'])
 
     var getAvailableItems = function () {
 
-        var curTime = Math.floor(document.getElementById('MyAdminVideo1').currentTime);
+        var curTime = (document.getElementById('MyAdminVideo1').currentTime);
         var filteredItems = items;
         filteredItems = _.filter(filteredItems, function (item) {
             return (item.ST <= curTime && item.ET >= curTime);
@@ -172,7 +172,7 @@ angular.module('myApp.admin', ['ui.router'])
     video.addEventListener("timeupdate", function () {
         // Calculate the slider value
         var value = (100 / video.duration) * video.currentTime;
-
+        $scope.currentTime = video.currentTime;
         // Update the slider value
         seekBar.value = value;
        
@@ -197,5 +197,11 @@ angular.module('myApp.admin', ['ui.router'])
 
 
     }
+
+    $scope.watch("selectedItem", function (newvalue, oldvalue) {
+
+    	dataServices.updateItem(newvalue);
+
+    });
 
 }]);

@@ -103,7 +103,9 @@ angular.module('myApp.service',[])
 
 
     ];
-    this.shopItems = items;
+    this.loadshopItems = function () {
+    	this.shopItems = items;
+    };
 
     this.addData = function (item) {
         var max = _.max(this.shopItems, function (item) {

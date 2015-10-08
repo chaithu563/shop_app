@@ -111,7 +111,7 @@ angular.module('myApp.view1', ['ui.router'])
 
 	var getAvailableItems = function () {
 
-		var curTime = Math.floor(document.getElementById('MyVideo1').currentTime);
+		var curTime = (document.getElementById('MyVideo1').currentTime);
 		var filteredItems = items;
 		filteredItems = _.filter(filteredItems, function (item) {
 			return (item.ST <= curTime && item.ET >= curTime);
