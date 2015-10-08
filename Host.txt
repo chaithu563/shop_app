@@ -60,6 +60,27 @@ MovieProduction varchar(255),
 PRIMARY KEY (Id)
 )
 
+INSERT INTO [futurxpb_happipug].[happipug].[Movies]
+           ([Id]
+           ,[MovieName]
+           ,[MovieHero]
+           ,[MovieHeroin]
+           ,[MovieLanguage]
+           ,[MovieDirector]
+           ,[MovieProduction])
+     VALUES
+           (1
+           ,'sreemanthudu'
+           ,'mahesh babu'
+           ,'shruti Hasan'
+           ,'telugu'
+           ,'koratal siva'
+           ,'mahesh production')
+GO
+
+
+
+
 
 
 CREATE TABLE MovieItems
@@ -78,3 +99,6 @@ Movie_Id int,
 PRIMARY KEY (Id),
 FOREIGN KEY (Movie_Id) REFERENCES Movies(Id)
 )
+----------------api serv
+http://localhost/shop/HappiPugService/HappiPugService/api/movies
+http://localhost/shop/HappiPugService/HappiPugService/api/movies/1

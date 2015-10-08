@@ -12,9 +12,9 @@ namespace HappiPugService.Controllers
     {
         // GET api/values
         happipugEntities ob = new happipugEntities();
-        public IEnumerable<MovieItem> Get()
+        public IQueryable<MovieItem> Get()
         {
-            return ob.MovieItems;
+            return ob.MovieItems.AsQueryable<MovieItem>();
         }
 
         // GET api/values/5

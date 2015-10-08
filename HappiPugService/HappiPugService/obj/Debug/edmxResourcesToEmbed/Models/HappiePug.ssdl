@@ -3,7 +3,7 @@
   <EntityContainer Name="happipugModelStoreContainer">
     <EntitySet Name="MovieItems" EntityType="happipugModel.Store.MovieItems" store:Type="Tables" Schema="happipug" />
     <EntitySet Name="Movies" EntityType="happipugModel.Store.Movies" store:Type="Tables" Schema="happipug" />
-    <AssociationSet Name="FK__MovieItem__Movie__145C0A3F" Association="happipugModel.Store.FK__MovieItem__Movie__145C0A3F">
+    <AssociationSet Name="FK__MovieItem__Movie__182C9B23" Association="happipugModel.Store.FK__MovieItem__Movie__182C9B23">
       <End Role="Movies" EntitySet="Movies" />
       <End Role="MovieItems" EntitySet="MovieItems" />
     </AssociationSet>
@@ -12,7 +12,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ProductNo" Type="int" Nullable="false" />
     <Property Name="ProductName" Type="varchar" MaxLength="255" />
     <Property Name="ProductShopURL" Type="varchar(max)" />
@@ -36,7 +36,7 @@
     <Property Name="MovieDirector" Type="varchar" MaxLength="255" />
     <Property Name="MovieProduction" Type="varchar" MaxLength="255" />
   </EntityType>
-  <Association Name="FK__MovieItem__Movie__145C0A3F">
+  <Association Name="FK__MovieItem__Movie__182C9B23">
     <End Role="Movies" Type="happipugModel.Store.Movies" Multiplicity="0..1" />
     <End Role="MovieItems" Type="happipugModel.Store.MovieItems" Multiplicity="*" />
     <ReferentialConstraint>
