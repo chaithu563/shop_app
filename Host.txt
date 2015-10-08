@@ -46,3 +46,35 @@ Datasource: 162.222.225.88
 Network packet size: 4096
 Server version: 11.00.3000
 Work station id: PLESK-WEB8
+
+--------------------sql
+CREATE TABLE Movies
+(
+Id int NOT NULL,
+MovieName varchar(255) NOT NULL,
+MovieHero varchar(255),
+MovieHeroin varchar(255),
+MovieLanguage varchar(255),
+MovieDirector varchar(255),
+MovieProduction varchar(255),
+PRIMARY KEY (Id)
+)
+
+
+
+CREATE TABLE MovieItems
+(
+Id int NOT NULL,
+ProductNo int NOT NULL,
+ProductName varchar(255),
+ProductShopURL varchar(MAX),
+ProductImgURL varchar(MAX),
+ProductPrice money,
+ptop decimal NOT NULL,
+pleft decimal NOT NULL,
+starttime decimal NOT NULL,
+endtime decimal NOT NULL,
+Movie_Id int,
+PRIMARY KEY (Id),
+FOREIGN KEY (Movie_Id) REFERENCES Movies(Id)
+)
