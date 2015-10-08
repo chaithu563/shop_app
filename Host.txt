@@ -37,3 +37,12 @@ https://studio.wirewax.com/#/studio/videos
 
 https://gayamstore.myshopify.com/admin/products/2466588099.json
 https://gayamstore.myshopify.com/admin/products/2464999811/images.json
+
+-----------------------data base
+Connection string: Data Source=162.222.225.88;Network Library=;Connection Timeout=15;Packet Size=4096;Integrated Security=no;User ID=happipug;Encrypt=no;
+Connection timeout: 15
+Database: futurxpb_happipug
+Datasource: 162.222.225.88
+Network packet size: 4096
+Server version: 11.00.3000
+Work station id: PLESK-WEB8
