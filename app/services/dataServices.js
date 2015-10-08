@@ -107,15 +107,15 @@ angular.module('myApp.service',[])
     	this.shopItems = items;
     };
 
-    this.addData = function (item) {
+    this.addNewItem = function (item) {
         var max = _.max(this.shopItems, function (item) {
             return item.id;
 
         });
 
-        var newitem = { id: max.id + 1, name: "", age: null, desc: "" };
-     
-        this.shopItems.push(newitem);
+       // var newitem = { id: max.id + 1, name: "", age: null, desc: "" };
+        item.id = max.id + 1;
+        this.shopItems.push(item);
 
     };
 
