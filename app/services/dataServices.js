@@ -1,4 +1,4 @@
-﻿'use strict';
+﻿//'use strict';
 
 angular.module('myApp.service',[])
 
@@ -129,19 +129,19 @@ angular.module('myApp.service',[])
         public decimal endtime { get; set; }
         public Nullable<int> Movie_Id { get; set; }
         */
-        var movieItem={ProductName:"",ProductShopURL:"",ProductImgURL:"",ProductPrice:0,ptop:0,pleft:0,starttime:item.ST,endtime:item.ET,Movie_Id:1}
+        var movieItem = { ProductNo:1001,ProductName: "", ProductShopURL: "", ProductImgURL: "", ProductPrice: 0, ptop: 0, pleft: 0, starttime: item.ST, endtime: item.ET, Movie_Id: 1 }
         //$http({
         //    method: 'POST',
         //    url: MovieItemsService,
         //    data: movieItem
           
         //});
-        $http.post(MovieItemsService, movieItem).then(
-            function (result) {
-                console.log(result);
+        $http.post(MovieItemsService,JSON.stringify(movieItem)).then(
+            function (data, status, headers, config) {
+                console.log(data);
             },
-             function (error) { 
-                 console.log(error);
+             function (data, status, headers, config) {
+                 console.log("failure message: " + JSON.stringify({ data: data }));
              }
             );
     };

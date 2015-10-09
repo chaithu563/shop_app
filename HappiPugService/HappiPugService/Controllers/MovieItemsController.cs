@@ -24,12 +24,13 @@ namespace HappiPugService.Controllers
         }
 
         // POST api/values
-        public void Post(MovieItem item)
+        public HttpResponseMessage Post([FromBody]MovieItem item)
         {
             MovieItem newItem = new MovieItem();
             newItem = item;
             ob.MovieItems.Add(newItem);
             ob.SaveChanges();
+            return Request.CreateResponse(HttpStatusCode.OK, item);
 
         }
 
