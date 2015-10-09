@@ -107,6 +107,7 @@ angular.module('myApp.service',[])
     	this.shopItems = items;
     };
 
+   var MovieItemsService="http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
     this.addNewItem = function (item) {
         var max = _.max(this.shopItems, function (item) {
             return item.id;
@@ -116,7 +117,33 @@ angular.module('myApp.service',[])
        // var newitem = { id: max.id + 1, name: "", age: null, desc: "" };
         item.id = max.id + 1;
         this.shopItems.push(item);
-
+        /*
+         public int ProductNo { get; set; }
+        public string ProductName { get; set; }
+        public string ProductShopURL { get; set; }
+        public string ProductImgURL { get; set; }
+        public Nullable<decimal> ProductPrice { get; set; }
+        public decimal ptop { get; set; }
+        public decimal pleft { get; set; }
+        public decimal starttime { get; set; }
+        public decimal endtime { get; set; }
+        public Nullable<int> Movie_Id { get; set; }
+        */
+        var movieItem={ProductName:"",ProductShopURL:"",ProductImgURL:"",ProductPrice:0,ptop:0,pleft:0,starttime:item.ST,endtime:item.ET,Movie_Id:1}
+        //$http({
+        //    method: 'POST',
+        //    url: MovieItemsService,
+        //    data: movieItem
+          
+        //});
+        $http.post(MovieItemsService, movieItem).then(
+            function (result) {
+                console.log(result);
+            },
+             function (error) { 
+                 console.log(error);
+             }
+            );
     };
 
     this.deleteItem = function (item) {

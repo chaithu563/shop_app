@@ -25,17 +25,27 @@ namespace HappiPugService.Controllers
         // POST api/values
         public void Post(Movie item)
         {
+            Movie newItem = new Movie();
+            newItem = item;
+            ob.Movies.Add(newItem);
+            ob.SaveChanges();
 
         }
 
         // PUT api/values/5
-        public void Put(int id, Movie value)
+        public void Put(int id, Movie newValues)
         {
+            var item = ob.Movies.Single(x => x.Id == id);
+            item = newValues;
+            ob.SaveChanges();
         }
 
         // DELETE api/values/5
         public void Delete(int id)
         {
+            var item = ob.Movies.Single(x => x.Id == id);
+            ob.Movies.Remove(item);
+            ob.SaveChanges();
         
         }
     }
