@@ -34,7 +34,8 @@ https://www.sequoiacap.com/india
 http://www.softbank.jp/en/
 http://www.innovid.com/
 https://studio.wirewax.com/#/studio/videos
-
+gayam_raja@yahoo.co.in
+azsxdc
 https://gayamstore.myshopify.com/admin/products/2466588099.json
 https://gayamstore.myshopify.com/admin/products/2464999811/images.json
 
@@ -100,5 +101,6 @@ PRIMARY KEY (Id),
 FOREIGN KEY (Movie_Id) REFERENCES Movies(Id)
 )
 ----------------api serv
-http://localhost/shop/HappiPugService/HappiPugService/api/movies
+http://localhost/shop/HappiPugService/HappiPugService/api/movieItems
 http://localhost/shop/HappiPugService/HappiPugService/api/movies/1
+

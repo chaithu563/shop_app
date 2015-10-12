@@ -23,47 +23,8 @@ angular.module('myApp.view1', ['ui.router'])
 		$window.open(item.redURL);
 	}
 	
-	$scope.videos = [
-           { name: 'Attharinti Daredi', code: '1' },
-           { name: 'Aagadu', code: '2' },
-           { name: 'Athadu', code: '3' },
-           { name: 'Avakay Biryani', code: '4' },
-
-           { name: 'Bhartiyudu', code: '5' },
-           { name: 'Bava', code: '6' },
-           { name: 'Bhuzzigadu', code: '7' },
-
-           { name: 'Chinnadanee', code: '8' },
-           { name: 'Chukkalo Chnadrudu', code: '9' },
-
-           { name: 'Dadi', code: '10' },
-           { name: 'Don', code: '11' },
-           { name: 'Doosukosta', code: '12' },
-
-
-           { name: 'Gamyam', code: '13' },
-           { name: 'Godavari', code: '15' },
-
-
-
-
-           { name: 'Jilla', code: '16' },
-           { name: 'Gabbar Sing', code: '18' },
-
-           { name: 'Munna', code: '19' },
-
-           { name: '3Idiots', code: '20' },
-           { name: 'Businessman', code: '21' },
-
-
-           { name: 'Sreemanthudu', code: '22' },
-           { name: 'Nenokkadee', code: '23' },
-
-           { name: 'Bahubali', code: '24' }
-
-
-	];
-	$scope.selectedVideo = '22';
+	
+	
 
 	//video control
 	// Video

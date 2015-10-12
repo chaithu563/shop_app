@@ -4,29 +4,19 @@ angular.module('myApp.admin', ['ui.router'])
 .controller('adminCtrl', ['$state', '$scope', 'dataServices', '$http', '$window', '_', '$timeout', '$interval', function ($state, $scope, dataServices, $http, $window, _, $timeout, $interval) {
   
    
-    dataServices.loadshopItems();
+    dataServices.loadshopItems().then(function (data) {
+        dataServices.shopItems = data.data;
+    });
     var getAvailableItems = function () {
 
         var curTime = (document.getElementById('MyAdminVideo1').currentTime);
         var filteredItems = dataServices.shopItems;
         filteredItems = _.filter(filteredItems, function (item) {
-            return (item.ST <= curTime && item.ET >= curTime);
+            return (item.starttime <= curTime && item.endtime >= curTime);
         });
         return filteredItems;
     }
-    //$scope.ShowItemsAvail = function (item) {
-    //    if ($scope.playorpause == "play") {
-    //        video.pause();
-    //        $scope.playorpause = "play";
-    //        // Update the button text to 'Play'
-    //        //  playButton.innerHTML = "Play";
-    //        $scope.availItems = getAvailableItems();
-    //        $scope.isVisible = true;
-    //        $scope.opacityinorout = "in";
-    //        $scope.$apply();
-    //    }
-    //}
-
+  
    
     var video = document.getElementById("MyAdminVideo1");
     video.play();
@@ -116,8 +106,12 @@ angular.module('myApp.admin', ['ui.router'])
 
         var videoinSec = Math.round(vidCurTime);
         $scope.isVisible = true;
-        $scope.availItems = getAvailableItems();
-        $scope.$apply();
+        dataServices.loadshopItems().then(function (data) {
+            dataServices.shopItems = data.data;
+            $scope.availItems = getAvailableItems();
+           // $scope.$apply();
+        });
+       
 
     }
 
@@ -132,14 +126,28 @@ angular.module('myApp.admin', ['ui.router'])
     $scope.$watch("selectedItem", function (newvalue, oldvalue) {
 
         if(oldvalue)
-    	dataServices.updateItem(newvalue);
+            dataServices.updateItem(newvalue).then(function (data) {
+                console.log(data);
+                handlePlusForItems();
+            });;
 
     }, true);
 
     $scope.addNewItem = function () {
-        var item = { name: "", x: 0, y: 0, ST: $scope.currentTime, ET: $scope.currentTime, imgURL: "", redURL: "", price: null };
-        dataServices.addNewItem(item);
-        handlePlusForItems();
+        var item = { ProductNo: null, ptop: 0, pleft: 0, starttime: $scope.currentTime, endtime: $scope.currentTime };
+        dataServices.addNewItem(item).then(function (data) {
+            console.log(data);
+            handlePlusForItems();
+        });;
+       
+    }
+
+    $scope.deleteItem = function (id) {
+       // var item = { name: "", x: 0, y: 0, ST: $scope.currentTime, ET: $scope.currentTime };
+        dataServices.deleteItem(id).then(function (data) {
+            console.log(data);
+            handlePlusForItems();
+        });;
     }
 
 }]);

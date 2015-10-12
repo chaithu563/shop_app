@@ -2,7 +2,7 @@
 
 angular.module('myApp.service',[])
 
-.service('dataServices' ,['$http','_', function ($http,_) {
+.service('dataServices', ['$http', '_', '$q', function ($http, _, $q) {
    
     var blazerItem = "http://www.happiepug.com/products/black-blazer";
     var carItem = "http://www.happiepug.com/products/car";
@@ -33,6 +33,46 @@ angular.module('myApp.service',[])
     var bhudhaItem = "http://www.happiepug.com/products/bhudha-item";
     var sareeItem = "http://www.happiepug.com/products/saree";
     var earringItem = "http://www.happiepug.com/products/ear-ring";
+    var videos = [
+           { name: 'Attharinti Daredi', code: '1' },
+           { name: 'Aagadu', code: '2' },
+           { name: 'Athadu', code: '3' },
+           { name: 'Avakay Biryani', code: '4' },
+
+           { name: 'Bhartiyudu', code: '5' },
+           { name: 'Bava', code: '6' },
+           { name: 'Bhuzzigadu', code: '7' },
+
+           { name: 'Chinnadanee', code: '8' },
+           { name: 'Chukkalo Chnadrudu', code: '9' },
+
+           { name: 'Dadi', code: '10' },
+           { name: 'Don', code: '11' },
+           { name: 'Doosukosta', code: '12' },
+
+
+           { name: 'Gamyam', code: '13' },
+           { name: 'Godavari', code: '15' },
+
+
+
+
+           { name: 'Jilla', code: '16' },
+           { name: 'Gabbar Sing', code: '18' },
+
+           { name: 'Munna', code: '19' },
+
+           { name: '3Idiots', code: '20' },
+           { name: 'Businessman', code: '21' },
+
+
+           { name: 'Sreemanthudu', code: '22' },
+           { name: 'Nenokkadee', code: '23' },
+
+           { name: 'Bahubali', code: '24' }
+
+
+    ];
 
     var items = [
 				{ id: 6, name: "cycle", x: 56, y: 40, ST: 9, ET: 10, imgURL: "cycle.jpg", redURL: CycleItem, price: 34000 },
@@ -103,99 +143,93 @@ angular.module('myApp.service',[])
 
 
     ];
+
+    var MoviesService = "http://localhost/shop/HappiPugService/HappiPugService/api/movies";
+    var MovieItemsService = "http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
+
     this.loadshopItems = function () {
-    	this.shopItems = items;
+        var deferred = $q.defer();
+        $http.get(MovieItemsService).then(
+         function (data, status, headers, config) {
+             deferred.resolve({
+                 data: data
+                            
+             });
+         },
+          function (data, status, headers, config) {
+              console.log("failure message: " + JSON.stringify({ data: data }));
+            
+          }
+         );
+        return deferred.promise;
     };
 
-   var MovieItemsService="http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
+  
     this.addNewItem = function (item) {
-        var max = _.max(this.shopItems, function (item) {
-            return item.id;
-
-        });
-
-       // var newitem = { id: max.id + 1, name: "", age: null, desc: "" };
-        item.id = max.id + 1;
-        this.shopItems.push(item);
-        /*
-         public int ProductNo { get; set; }
-        public string ProductName { get; set; }
-        public string ProductShopURL { get; set; }
-        public string ProductImgURL { get; set; }
-        public Nullable<decimal> ProductPrice { get; set; }
-        public decimal ptop { get; set; }
-        public decimal pleft { get; set; }
-        public decimal starttime { get; set; }
-        public decimal endtime { get; set; }
-        public Nullable<int> Movie_Id { get; set; }
-        */
-        var movieItem = { ProductNo:1001,ProductName: "", ProductShopURL: "", ProductImgURL: "", ProductPrice: 0, ptop: 0, pleft: 0, starttime: item.ST, endtime: item.ET, Movie_Id: 1 }
-        //$http({
-        //    method: 'POST',
-        //    url: MovieItemsService,
-        //    data: movieItem
-          
-        //});
-        $http.post(MovieItemsService,JSON.stringify(movieItem)).then(
+       
+        var deferred = $q.defer();
+       
+      
+        $http.post(MovieItemsService,JSON.stringify(item)).then(
             function (data, status, headers, config) {
-                console.log(data);
+                deferred.resolve({
+                              data: data
+                            
+                          });
             },
              function (data, status, headers, config) {
                  console.log("failure message: " + JSON.stringify({ data: data }));
              }
             );
-    };
-
-    this.deleteItem = function (item) {
-
-        this.shopItems = _.filter(this.gridData, function (eachitem) {
-            return (eachitem.id !== item)
-
-        });
-
-    };
-
-    this.updateItem = function (item) {
-
-        this.updateItem = _.filter(this.shopItems, function (eachitem) {
-            return (eachitem.id !== item.id)
-
-        });
-        this.updateItem = item;
-
-    };
-
-
-
-}])
-
-.service('promisServices', ['$http', '_','$q', function ($http, _,$q) {
-
-  
-
-    this.getData = function () {
-        var deferred = $q.defer();
-
-        setTimeout(function () {
-          //  deferred.notify('About to greet ' + name + '.');
-            var gridData = [{ id: 1, name: "Moroni", age: 50, desc: "hero of the day1" },
-                 { id: 2, name: "Tiancum", age: 43, desc: "hero of the day2" },
-                 { id: 3, name: "Jacob", age: 27, desc: "hero of the day3" },
-                 { id: 4, name: "Nephi", age: 29, desc: "hero of the day4" },
-                 { id: 5, name: "Enos", age: 34, desc: "hero of the day5" }];
-            if (true) {
-                deferred.resolve(gridData);
-            } else {
-                deferred.reject('data  is not allowed.');
-            }
-        }, 1000);
-
         return deferred.promise;
 
     };
 
-   
+    this.deleteItem = function (id) {
+        var deferred = $q.defer();
+        $http.delete(MovieItemsService, id).then(
+           function (data, status, headers, config) {
+               deferred.resolve({
+                   data: data
+
+               });
+           },
+            function (data, status, headers, config) {
+                console.log("failure message: " + JSON.stringify({ data: data }));
+            }
+           );
+        return deferred.promise;
+    };
+
+    this.updateItem = function (item) {
+        var movieItem = {
+            ProductNo: item.productid,
+            ptop: 0,
+            pleft: 0,
+            starttime: item.ST,
+            endtime: item.ET,
+            Movie_Id: 1
+        }
+        var deferred = $q.defer();
+
+        $http.put(MovieItemsService, JSON.stringify(movieItem)).then(
+           function (data, status, headers, config) {
+               deferred.resolve({
+                   data: data
+
+               });
+           },
+            function (data, status, headers, config) {
+                console.log("failure message: " + JSON.stringify({ data: data }));
+            }
+           );
+        return deferred.promise;
+
+
+    };
 
 
 
 }])
+
+

@@ -47,6 +47,5 @@ C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web.WebPages.xml
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web.WebPages.Deployment.xml
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web.WebPages.Razor.xml
-C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.csprojResolveAssemblyReference.cache
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.dll
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.pdb
