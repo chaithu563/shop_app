@@ -202,17 +202,17 @@ angular.module('myApp.service',[])
     };
 
     this.updateItem = function (item) {
-        var movieItem = {
-            ProductNo: item.productid,
-            ptop: 0,
-            pleft: 0,
-            starttime: item.ST,
-            endtime: item.ET,
-            Movie_Id: 1
-        }
+        //var movieItem = {
+        //    ProductNo: item.productid,
+        //    ptop: 0,
+        //    pleft: 0,
+        //    starttime: item.ST,
+        //    endtime: item.ET,
+        //    Movie_Id: 1
+        //}
         var deferred = $q.defer();
 
-        $http.put(MovieItemsService, JSON.stringify(movieItem)).then(
+        $http.put(MovieItemsService, JSON.stringify(item)).then(
            function (data, status, headers, config) {
                deferred.resolve({
                    data: data

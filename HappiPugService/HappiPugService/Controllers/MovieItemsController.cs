@@ -14,9 +14,9 @@ namespace HappiPugService.Controllers
         happipugEntities ob = new happipugEntities();
         [HttpGet]
 
-        public IEnumerable<MovieItem> Get()
+        public IQueryable<MovieItem> Get()
         {
-            var result= ob.MovieItems.ToList<MovieItem>();
+            var result= ob.MovieItems.AsQueryable();
            // ob.Dispose();
             return result;
         }
@@ -39,11 +39,15 @@ namespace HappiPugService.Controllers
         }
 
         // PUT api/values/5
-        public void Put( MovieItem newValues)
+        public void Put([FromBody]MovieItem newValues)
         {
           //  MovieItem updateItem= new MovieItem();
             var item = ob.MovieItems.Single(x => x.Id == newValues.Id);
-            item = newValues;
+            item.endtime = newValues.endtime;
+            item.starttime = newValues.starttime;
+            item.ProductNo = newValues.ProductNo;
+            item.ptop = newValues.ptop;
+            item.pleft = newValues.pleft;
             ob.SaveChanges();
         }
 

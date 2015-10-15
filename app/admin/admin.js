@@ -4,9 +4,6 @@ angular.module('myApp.admin', ['ui.router'])
 .controller('adminCtrl', ['$state', '$scope', 'dataServices', '$http', '$window', '_', '$timeout', '$interval', function ($state, $scope, dataServices, $http, $window, _, $timeout, $interval) {
   
    
-    dataServices.loadshopItems().then(function (data) {
-        dataServices.shopItems = data.data;
-    });
     var getAvailableItems = function () {
 
         var curTime = (document.getElementById('MyAdminVideo1').currentTime);
@@ -106,12 +103,12 @@ angular.module('myApp.admin', ['ui.router'])
 
         var videoinSec = Math.round(vidCurTime);
         $scope.isVisible = true;
-        dataServices.loadshopItems().then(function (data) {
-            dataServices.shopItems = data.data;
-            $scope.availItems = getAvailableItems();
-           // $scope.$apply();
-        });
-       
+        //dataServices.loadshopItems().then(function (data) {
+        //    dataServices.shopItems = data.data.data;
+        //    $scope.availItems = getAvailableItems();
+          
+        //});
+        $scope.availItems = getAvailableItems();
 
     }
 
@@ -128,16 +125,20 @@ angular.module('myApp.admin', ['ui.router'])
         if(oldvalue)
             dataServices.updateItem(newvalue).then(function (data) {
                 console.log(data);
-                handlePlusForItems();
+               // handlePlusForItems();
+                loadItemsData();
             });;
 
     }, true);
 
     $scope.addNewItem = function () {
-        var item = { ProductNo: null, ptop: 0, pleft: 0, starttime: $scope.currentTime, endtime: $scope.currentTime };
+        var curTime = (document.getElementById('MyAdminVideo1').currentTime);
+        var item = { ProductNo: null, ptop: 0, pleft: 0, starttime: curTime, endtime: curTime, Movie_Id: 1 };
         dataServices.addNewItem(item).then(function (data) {
             console.log(data);
-            handlePlusForItems();
+            $scope.selectedItem = data.data.data;
+            // handlePlusForItems();
+            loadItemsData();
         });;
        
     }
@@ -146,8 +147,16 @@ angular.module('myApp.admin', ['ui.router'])
        // var item = { name: "", x: 0, y: 0, ST: $scope.currentTime, ET: $scope.currentTime };
         dataServices.deleteItem(id).then(function (data) {
             console.log(data);
-            handlePlusForItems();
+            loadItemsData();
         });;
     }
+    function loadItemsData() {
+
+        dataServices.loadshopItems().then(function (data) {
+            dataServices.shopItems = data.data.data;
+            handlePlusForItems();
+        });
+    }
+    loadItemsData();
 
 }]);

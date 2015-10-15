@@ -18,9 +18,9 @@
                    return { x: xPosition, y: yPosition };
                }
 
-               var topPer = ((element[0].offsetParent.offsetHeight) * scope.item.x) / 100;
+               var topPer = ((element[0].offsetParent.offsetHeight) * scope.item.ptop) / 100;
 
-               var leftPer = ((element[0].offsetParent.offsetWidth) * scope.item.y) / 100;
+               var leftPer = ((element[0].offsetParent.offsetWidth) * scope.item.pleft) / 100;
                var startX = 0, startY = 0, x = topPer, y = leftPer;
 
                element.css({
@@ -28,8 +28,8 @@
                    border: '1px solid red',
                    backgroundColor: 'lightgrey',
                    cursor: 'pointer',
-                   top: scope.item.x + '%',
-                   left: scope.item.y + '%'
+                   top: scope.item.ptop + '%',
+                   left: scope.item.pleft + '%'
                });
              
                element.on('mousedown', function(event) {
@@ -71,12 +71,12 @@
 
                    var top =Math.round( ((finalPositiontop) * 100) / element[0].offsetParent.offsetHeight);
                    var left = Math.round(((finalPositionleft) * 100) / element[0].offsetParent.offsetWidth);
-                   scope.item.x = element[0].attributes["style"].value.split(';')[3].split(':')[1].indexOf("%")>-1 ? finalPositiontop :top ;
-                   scope.item.y = element[0].attributes["style"].value.split(';')[4].split(':')[1].indexOf("%") > -1 ? finalPositionleft : left;
-                   if (scope.item.x >= 0 && scope.item.y >= 0 && scope.item.x <= 100 && scope.item.y <= 100)
+                   scope.item.ptop = element[0].attributes["style"].value.split(';')[3].split(':')[1].indexOf("%")>-1 ? finalPositiontop :top ;
+                   scope.item.pleft = element[0].attributes["style"].value.split(';')[4].split(':')[1].indexOf("%") > -1 ? finalPositionleft : left;
+                   if (scope.item.ptop >= 0 && scope.item.pleft >= 0 && scope.item.ptop <= 100 && scope.item.pleft <= 100)
                    element.css({
-                       top: scope.item.x + '%',
-                       left: scope.item.y + '%'
+                       top: scope.item.ptop + '%',
+                       left: scope.item.pleft + '%'
                    });
                }
            }
