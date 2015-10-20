@@ -15,7 +15,7 @@ namespace HappiPugService.Models
     public partial class MovieItem
     {
         public int Id { get; set; }
-        public int ProductNo { get; set; }
+        public Int64 ProductNo { get; set; }
         public string ProductName { get; set; }
         public string ProductShopURL { get; set; }
         public string ProductImgURL { get; set; }

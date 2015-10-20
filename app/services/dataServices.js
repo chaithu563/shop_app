@@ -146,6 +146,9 @@ angular.module('myApp.service',[])
 
     var MoviesService = "http://localhost/shop/HappiPugService/HappiPugService/api/movies";
     var MovieItemsService = "http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
+    var adminShoppifyURL = "https://gayamstore.myshopify.com/admin/products/";
+
+    //Movie items operation
 
     this.loadshopItems = function () {
         var deferred = $q.defer();
@@ -164,7 +167,6 @@ angular.module('myApp.service',[])
         return deferred.promise;
     };
 
-  
     this.addNewItem = function (item) {
        
         var deferred = $q.defer();
@@ -202,16 +204,7 @@ angular.module('myApp.service',[])
     };
 
     this.updateItem = function (item) {
-        //var movieItem = {
-        //    ProductNo: item.productid,
-        //    ptop: 0,
-        //    pleft: 0,
-        //    starttime: item.ST,
-        //    endtime: item.ET,
-        //    Movie_Id: 1
-        //}
         var deferred = $q.defer();
-
         $http.put(MovieItemsService, JSON.stringify(item)).then(
            function (data, status, headers, config) {
                deferred.resolve({
@@ -227,7 +220,27 @@ angular.module('myApp.service',[])
 
 
     };
+    //end Movie items operation
 
+    //shoppify operations
+    this.loadProductInfo=function(id){
+
+          var deferred = $q.defer();
+          $http.get(adminShoppifyURL + id+ ".json").then(
+         function (data, status, headers, config) {
+             deferred.resolve({
+                 data: data
+                            
+             });
+         },
+          function (data, status, headers, config) {
+              console.log("failure message: " + JSON.stringify({ data: data }));
+            
+          }
+         );
+        return deferred.promise;
+
+    }
 
 
 }])

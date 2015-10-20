@@ -13,15 +13,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <Property Name="ProductNo" Type="Int32" Nullable="false" />
+    <Property Name="ProductNo" Type="Int64" />
     <Property Name="ProductName" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="ProductShopURL" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
     <Property Name="ProductImgURL" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
     <Property Name="ProductPrice" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="ptop" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="pleft" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="starttime" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="endtime" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="starttime" Type="Decimal" Precision="28" Scale="6" />
+    <Property Name="endtime" Type="Decimal" Precision="28" Scale="6" />
     <Property Name="Movie_Id" Type="Int32" />
     <NavigationProperty Name="Movie" Relationship="happipugModel.FK__MovieItem__Movie__145C0A3F" FromRole="MovieItems" ToRole="Movies" />
   </EntityType>

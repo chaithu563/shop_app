@@ -13,15 +13,15 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="ProductNo" Type="int" Nullable="false" />
+    <Property Name="ProductNo" Type="numeric" />
     <Property Name="ProductName" Type="varchar" MaxLength="255" />
     <Property Name="ProductShopURL" Type="varchar(max)" />
     <Property Name="ProductImgURL" Type="varchar(max)" />
     <Property Name="ProductPrice" Type="money" />
     <Property Name="ptop" Type="decimal" Nullable="false" />
     <Property Name="pleft" Type="decimal" Nullable="false" />
-    <Property Name="starttime" Type="decimal" Nullable="false" />
-    <Property Name="endtime" Type="decimal" Nullable="false" />
+    <Property Name="starttime" Type="decimal" Precision="28" Scale="6" />
+    <Property Name="endtime" Type="decimal" Precision="28" Scale="6" />
     <Property Name="Movie_Id" Type="int" />
   </EntityType>
   <EntityType Name="Movies">

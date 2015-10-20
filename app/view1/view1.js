@@ -5,7 +5,7 @@ angular.module('myApp.view1', ['ui.router'])
   
 
 	$scope.isVisible = false;
-	dataServices.loadshopItems();
+//	dataServices.loadshopItems();
 
 
 	var getAvailableItems = function () {
@@ -13,7 +13,7 @@ angular.module('myApp.view1', ['ui.router'])
 		var curTime = (document.getElementById('MyVideo1').currentTime);
 		var filteredItems = dataServices.shopItems;
 		filteredItems = _.filter(filteredItems, function (item) {
-			return (item.ST <= curTime && item.ET >= curTime);
+		    return (item.starttime <= curTime && item.endtime >= curTime);
 		});
 		return filteredItems;
 	}
@@ -158,7 +158,7 @@ angular.module('myApp.view1', ['ui.router'])
 	    var videoinSec = Math.round(vidCurTime);
 	    $scope.isVisible = true;
 	  $scope.availItems= getAvailableItems();
-	  $scope.$apply();
+	 // $scope.$apply();
 
 	}
 	// Pause the video when the seek handle is being dragged
@@ -180,13 +180,25 @@ angular.module('myApp.view1', ['ui.router'])
 	$scope.openSelectedItem = function (item) {
 
 	    $scope.isItemSelected = true;
-	    $scope.selectedItem = item;
 
+	 //   $scope.selectedItem = item;
 
+	    dataServices.loadProductInfo(item.ProductNo).then(function (data) {
+	        $scope.selectedItem = data;
+	    });
 	}
 
 	$scope.closeItemSelected = function () {
 	    $scope.isItemSelected = false;
 	}
+
+	function loadItemsData() {
+
+	    dataServices.loadshopItems().then(function (data) {
+	        dataServices.shopItems = data.data.data;
+	        handlePlusForItems();
+	    });
+	}
+	loadItemsData();
 
 }]);

@@ -7,14 +7,14 @@
 
 
         <div  ng-class="{'video_overlays': !fullscrren , 'video_overlaysfs': fullscrren}"  ng-show="isVisible">
-            <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.x +'%' , 'left': item.y+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
+            <div ng-repeat="item in availItems" ng-style="{'position':'absolute' ,'top': item.ptop +'%' , 'left': item.pleft+'%'}" ng-class="all-overlays overlay-image overlay-1 out">
                 <img style="width: 30px; height: 30px; color: black" ng-src="../app/img/plus-tag.svg" ng-click="openSelectedItem(item)">
                
             </div>
-             <div class="item_overlays" ng-style="{'position':'absolute' ,'top': selectedItem.x+15+'%' , 'left': selectedItem.y+7+'%'}" ng-show="isItemSelected">
+             <div class="item_overlays" ng-style="{'position':'absolute' ,'top': selectedItem.ptop+15+'%' , 'left': selectedItem.pleft+7+'%'}" ng-show="isItemSelected">
 
                     <div class="modal">
-                        <div class="modal-dialog" ng-style="{'top': (selectedItem.x/2)+'%'}">
+                        <div class="modal-dialog" ng-style="{'top': (selectedItem.ptop/2)+'%'}">
                             <div class="modal-header">
                                 <span>
                                     <h2>{{selectedItem.name}}</h2>
