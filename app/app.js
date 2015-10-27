@@ -46,6 +46,19 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
          templateUrl: 'admin/admin.html',
          controller: 'adminCtrl'
 
-     })
+     });
 
+  
+
+}])
+.run(['$http', function ($http) {
+    var login = 'gayam_raja@yahoo.co.in';
+    var password = 'azsxdc';
+    $http.defaults.headers.common['Authorization'] = 'Basic ' + login + ':' + password;
+    //$http.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT';
+    //$http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+    //$http.defaults.headers.common['Access-Control-Allow-Credentials'] = true;
+    //$http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
+    //res.header("Access-Control-Allow-Origin", "*");
+    //res.header("Access-Control-Allow-Headers", "X-Requested-With");
 }]);

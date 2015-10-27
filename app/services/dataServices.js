@@ -1,9 +1,9 @@
 ﻿//'use strict';
 
-angular.module('myApp.service',[])
+angular.module('myApp.service', [])
 
 .service('dataServices', ['$http', '_', '$q', function ($http, _, $q) {
-   
+
     var blazerItem = "http://www.happiepug.com/products/black-blazer";
     var carItem = "http://www.happiepug.com/products/car";
     var capItem = "http://www.happiepug.com/products/cap";
@@ -144,8 +144,12 @@ angular.module('myApp.service',[])
 
     ];
 
+    //var MoviesService = "http://edarachaitanya.com/shop/HappiPugService/HappiPugService/api/movies";
+    //var MovieItemsService = "http://edarachaitanya.com/shop/HappiPugService/HappiPugService/api/movieItems";
+
     var MoviesService = "http://localhost/shop/HappiPugService/HappiPugService/api/movies";
     var MovieItemsService = "http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
+
     var adminShoppifyURL = "https://gayamstore.myshopify.com/admin/products/";
 
     //Movie items operation
@@ -156,28 +160,28 @@ angular.module('myApp.service',[])
          function (data, status, headers, config) {
              deferred.resolve({
                  data: data
-                            
+
              });
          },
           function (data, status, headers, config) {
               console.log("failure message: " + JSON.stringify({ data: data }));
-            
+
           }
          );
         return deferred.promise;
     };
 
     this.addNewItem = function (item) {
-       
+
         var deferred = $q.defer();
-       
-      
-        $http.post(MovieItemsService,JSON.stringify(item)).then(
+
+
+        $http.post(MovieItemsService, JSON.stringify(item)).then(
             function (data, status, headers, config) {
                 deferred.resolve({
-                              data: data
-                            
-                          });
+                    data: data
+
+                });
             },
              function (data, status, headers, config) {
                  console.log("failure message: " + JSON.stringify({ data: data }));
@@ -223,21 +227,38 @@ angular.module('myApp.service',[])
     //end Movie items operation
 
     //shoppify operations
-    this.loadProductInfo=function(id){
+    this.loadProductInfo = function (id) {
 
-          var deferred = $q.defer();
-          $http.get(adminShoppifyURL + id+ ".json").then(
-         function (data, status, headers, config) {
-             deferred.resolve({
-                 data: data
-                            
-             });
-         },
-          function (data, status, headers, config) {
-              console.log("failure message: " + JSON.stringify({ data: data }));
-            
-          }
-         );
+        var deferred = $q.defer();
+        // $http.get(adminShoppifyURL + id+ ".json").then(
+        //function (data, status, headers, config) {
+        //    deferred.resolve({
+        //        data: data
+
+        //    });
+        //},
+        // function (data, status, headers, config) {
+        //     console.log("failure message: " + JSON.stringify({ data: data }));
+
+        // }
+        //);
+
+        $http({
+            method: 'JSONP',
+            url: adminShoppifyURL + id + ".json"
+        }).
+      success(function (data, status, headers, config) {
+          deferred.resolve({
+              data: data
+
+          });
+      }).
+      error(function (data, status, headers, config) {
+          //your code when fails
+          console.log("failure message: " + JSON.stringify({ data: data }));
+      });
+
+
         return deferred.promise;
 
     }
