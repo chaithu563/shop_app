@@ -201,4 +201,7 @@ angular.module('myApp.view1', ['ui.router'])
 	}
 	loadItemsData();
 
+    //shoppify
+	//document.getElementById('ShopifyEmbedScript') || document.write('<script type="text/javascript" src="https://widgets.shopifyapps.com/assets/widgets/embed/client.js" id="ShopifyEmbedScript"><\/script>');
+
 }]);

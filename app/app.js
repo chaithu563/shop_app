@@ -19,7 +19,10 @@ angular.module('myApp', [
   
 ]).
 
-config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
+
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
     $urlRouterProvider.otherwise('/home');
     $stateProvider
@@ -51,7 +54,7 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
   
 
 }])
-.run(['$http', function ($http) {
+.run(['$http', '$window', '$location', function ($http, $window, $location) {
     var login = 'gayam_raja@yahoo.co.in';
     var password = 'azsxdc';
     $http.defaults.headers.common['Authorization'] = 'Basic ' + login + ':' + password;
@@ -61,4 +64,13 @@ config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRo
     //$http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
     //res.header("Access-Control-Allow-Origin", "*");
     //res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    $window.onload = RedirNonHttps();
+
+    function RedirNonHttps() {
+       var path= $location.path();
+        //if ($location.href.indexOf("https://") == -1) {
+        //    $location.href = $location.href.replace("http://", "https://");
+        //}
+       $location.path(path.replace("http://", "https://"));
+    }
 }]);

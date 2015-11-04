@@ -230,33 +230,33 @@ angular.module('myApp.service', [])
     this.loadProductInfo = function (id) {
 
         var deferred = $q.defer();
-        // $http.get(adminShoppifyURL + id+ ".json").then(
-        //function (data, status, headers, config) {
-        //    deferred.resolve({
-        //        data: data
+         $http.get(adminShoppifyURL + id+ ".json").then(
+        function (data, status, headers, config) {
+            deferred.resolve({
+                data: data
 
-        //    });
-        //},
-        // function (data, status, headers, config) {
-        //     console.log("failure message: " + JSON.stringify({ data: data }));
+            });
+        },
+         function (data, status, headers, config) {
+             console.log("failure message: " + JSON.stringify({ data: data }));
 
-        // }
-        //);
+         }
+        );
 
-        $http({
-            method: 'JSONP',
-            url: adminShoppifyURL + id + ".json"
-        }).
-      success(function (data, status, headers, config) {
-          deferred.resolve({
-              data: data
+      //  $http({
+      //      method: 'JSONP',
+      //      url: adminShoppifyURL + id + ".json"
+      //  }).
+      //success(function (data, status, headers, config) {
+      //    deferred.resolve({
+      //        data: data
 
-          });
-      }).
-      error(function (data, status, headers, config) {
-          //your code when fails
-          console.log("failure message: " + JSON.stringify({ data: data }));
-      });
+      //    });
+      //}).
+      //error(function (data, status, headers, config) {
+      //    //your code when fails
+      //    console.log("failure message: " + JSON.stringify({ data: data }));
+      //});
 
 
         return deferred.promise;
