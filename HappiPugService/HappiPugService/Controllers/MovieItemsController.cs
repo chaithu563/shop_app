@@ -46,6 +46,7 @@ namespace HappiPugService.Controllers
             item.endtime = newValues.endtime;
             item.starttime = newValues.starttime;
             item.ProductNo = newValues.ProductNo;
+            item.ProductHandle = newValues.ProductHandle;
             item.ptop = newValues.ptop;
             item.pleft = newValues.pleft;
             ob.SaveChanges();

@@ -19,7 +19,12 @@ angular.module('myApp', [
   
 ]).
 
-config(['$stateProvider', '$urlRouterProvider', '$httpProvider', function ($stateProvider, $urlRouterProvider, $httpProvider) {
+config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$sceDelegateProvider', function ($stateProvider, $urlRouterProvider, $httpProvider, $sceDelegateProvider) {
+
+    $sceDelegateProvider.resourceUrlWhitelist([
+  'self',
+  "https://widgets.shopifyapps.com/**"
+    ]);
 
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];

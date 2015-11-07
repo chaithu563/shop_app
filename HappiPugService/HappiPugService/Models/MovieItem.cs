@@ -25,7 +25,7 @@ namespace HappiPugService.Models
         public decimal starttime { get; set; }
         public decimal endtime { get; set; }
         public Nullable<int> Movie_Id { get; set; }
-    
+        public string ProductHandle { get; set; }
         public virtual Movie Movie { get; set; }
     }
 }

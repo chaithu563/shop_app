@@ -173,6 +173,7 @@ button {
   -ms-transform: translate(0, 0);
   transform: translate(0, 0);
   top: 14%;
+  height:40%;
 }
 .modal-dialog {
   background: #fefefe;

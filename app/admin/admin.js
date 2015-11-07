@@ -133,7 +133,7 @@ angular.module('myApp.admin', ['ui.router'])
 
     $scope.addNewItem = function () {
         var curTime = (document.getElementById('MyAdminVideo1').currentTime);
-        var item = { ProductNo: null, ptop: 0, pleft: 0, starttime: curTime, endtime: curTime, Movie_Id: 1 };
+        var item = { ProductHandle: null, ptop: 0, pleft: 0, starttime: curTime, endtime: curTime, Movie_Id: 1 };
         dataServices.addNewItem(item).then(function (data) {
             console.log(data);
             $scope.selectedItem = data.data.data;

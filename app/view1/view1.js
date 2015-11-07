@@ -181,11 +181,12 @@ angular.module('myApp.view1', ['ui.router'])
 
 	    $scope.isItemSelected = true;
 
-	 //   $scope.selectedItem = item;
-
-	    dataServices.loadProductInfo(item.ProductNo).then(function (data) {
-	        $scope.selectedItem = data;
-	    });
+	    $scope.selectedItem = item;
+	    $scope.ProductHandleURL = "https://widgets.shopifyapps.com/embed/product?eid=0&button_text_color=ffffff&button_background_color=7db461&buy_button_text=Buy now&redirect_to=checkout&display_size=compact&has_image=true&product_handle=" + $scope.selectedItem.ProductHandle + "&shop=gayamstore.myshopify.com&embed_type=product&r=";
+	    //dataServices.loadProductInfo(item.ProductNo).then(function (data) {
+	    //    $scope.selectedItem = data;
+	    //});
+	    //$scope.$apply();
 	}
 
 	$scope.closeItemSelected = function () {

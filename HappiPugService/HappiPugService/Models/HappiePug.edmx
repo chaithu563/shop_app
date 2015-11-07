@@ -28,6 +28,7 @@
           <Property Name="starttime" Type="decimal" Precision="28" Scale="6" />
           <Property Name="endtime" Type="decimal" Precision="28" Scale="6" />
           <Property Name="Movie_Id" Type="int" />
+          <Property Name="ProductHandle" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="Movies">
           <Key>
@@ -81,6 +82,7 @@
           <Property Name="endtime" Type="Decimal" Precision="28" Scale="6" />
           <Property Name="Movie_Id" Type="Int32" />
           <NavigationProperty Name="Movie" Relationship="happipugModel.FK__MovieItem__Movie__145C0A3F" FromRole="MovieItems" ToRole="Movies" />
+          <Property Type="String" Name="ProductHandle" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Movie">
           <Key>
@@ -116,6 +118,7 @@
           <EntitySetMapping Name="MovieItems">
             <EntityTypeMapping TypeName="happipugModel.MovieItem">
               <MappingFragment StoreEntitySet="MovieItems">
+                <ScalarProperty Name="ProductHandle" ColumnName="ProductHandle" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />

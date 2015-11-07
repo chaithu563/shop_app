@@ -4,6 +4,7 @@
     <EntitySetMapping Name="MovieItems">
       <EntityTypeMapping TypeName="happipugModel.MovieItem">
         <MappingFragment StoreEntitySet="MovieItems">
+          <ScalarProperty Name="ProductHandle" ColumnName="ProductHandle" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="ProductNo" ColumnName="ProductNo" />
           <ScalarProperty Name="ProductName" ColumnName="ProductName" />

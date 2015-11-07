@@ -23,6 +23,7 @@
     <Property Name="starttime" Type="decimal" Precision="28" Scale="6" />
     <Property Name="endtime" Type="decimal" Precision="28" Scale="6" />
     <Property Name="Movie_Id" Type="int" />
+    <Property Name="ProductHandle" Type="varchar(max)" />
   </EntityType>
   <EntityType Name="Movies">
     <Key>

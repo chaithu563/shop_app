@@ -24,6 +24,7 @@
     <Property Name="endtime" Type="Decimal" Precision="28" Scale="6" />
     <Property Name="Movie_Id" Type="Int32" />
     <NavigationProperty Name="Movie" Relationship="happipugModel.FK__MovieItem__Movie__145C0A3F" FromRole="MovieItems" ToRole="Movies" />
+    <Property Type="String" Name="ProductHandle" MaxLength="Max" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="Movie">
     <Key>
