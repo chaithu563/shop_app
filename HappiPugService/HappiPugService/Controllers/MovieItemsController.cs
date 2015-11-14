@@ -49,6 +49,7 @@ namespace HappiPugService.Controllers
             item.ProductHandle = newValues.ProductHandle;
             item.ptop = newValues.ptop;
             item.pleft = newValues.pleft;
+            
             ob.SaveChanges();
         }
 

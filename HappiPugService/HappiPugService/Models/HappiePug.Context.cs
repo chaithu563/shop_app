@@ -7,25 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HappiPugService.Models
+using HappiPugService.Models;
+using System;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
+
+public partial class happipugEntities : DbContext
 {
-    using System;
-    using System.Data.Entity;
-    using System.Data.Entity.Infrastructure;
-    
-    public partial class happipugEntities : DbContext
+    public happipugEntities()
+        : base("name=happipugEntities")
     {
-        public happipugEntities()
-            : base("name=happipugEntities")
-        {
-        }
-    
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            throw new UnintentionalCodeFirstException();
-        }
-    
-        public DbSet<MovieItem> MovieItems { get; set; }
-        public DbSet<Movie> Movies { get; set; }
     }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        throw new UnintentionalCodeFirstException();
+    }
+
+    public DbSet<MovieItem> MovieItems { get; set; }
+    public DbSet<Movie> Movies { get; set; }
 }

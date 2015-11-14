@@ -178,10 +178,11 @@ angular.module('myApp.view1', ['ui.router'])
 	});
 
 	$scope.openSelectedItem = function (item) {
-
+	    $scope.ProductHandleURL = "";
 	    $scope.isItemSelected = true;
 
 	    $scope.selectedItem = item;
+	  //  $scope.ProductHandleURL="https://widgets.shopifyapps.com/embed/product?eid=0&product_modal=false&button_text_color=ffffff&button_background_color=7db461&buy_button_text=Add%20to%20cart&redirect_to=cart&display_size=compact&has_image=true&product_handle="+ $scope.selectedItem.ProductHandle  +"&shop=gayamstore.myshopify.com&embed_type=product&r=";
 	    $scope.ProductHandleURL = "https://widgets.shopifyapps.com/embed/product?eid=0&button_text_color=ffffff&button_background_color=7db461&buy_button_text=Buy now&redirect_to=checkout&display_size=compact&has_image=true&product_handle=" + $scope.selectedItem.ProductHandle + "&shop=gayamstore.myshopify.com&embed_type=product&r=";
 	    //dataServices.loadProductInfo(item.ProductNo).then(function (data) {
 	    //    $scope.selectedItem = data;
@@ -191,6 +192,7 @@ angular.module('myApp.view1', ['ui.router'])
 
 	$scope.closeItemSelected = function () {
 	    $scope.isItemSelected = false;
+	    $scope.ProductHandleURL = "";
 	}
 
 	function loadItemsData() {

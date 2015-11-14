@@ -79,6 +79,14 @@
 				</div>
 
             </div>
+
+             <div class="button-delete-div" ng-if="selectedItem" >
+                    <button class="admin-add-button" type="button" ng-click="deleteItem(selectedItem.Id)"  data-button-menu-id="annotator-add-menu" aria-pressed="false" aria-expanded="false">
+                        <span style="font-size: large; margin-right: 20%">+</span><span style="font-size: medium">Delete</span>
+                    </button>
+                </div>
+
+
         </div>
     </div>
 

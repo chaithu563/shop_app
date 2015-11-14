@@ -193,7 +193,7 @@ angular.module('myApp.service', [])
 
     this.deleteItem = function (id) {
         var deferred = $q.defer();
-        $http.delete(MovieItemsService, id).then(
+        $http.delete(MovieItemsService+'/'+id).then(
            function (data, status, headers, config) {
                deferred.resolve({
                    data: data

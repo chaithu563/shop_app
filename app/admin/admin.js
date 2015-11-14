@@ -148,6 +148,7 @@ angular.module('myApp.admin', ['ui.router'])
         dataServices.deleteItem(id).then(function (data) {
             console.log(data);
             loadItemsData();
+            $scope.selectedItem = null;
         });;
     }
     function loadItemsData() {
