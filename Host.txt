@@ -107,4 +107,4 @@ FOREIGN KEY (Movie_Id) REFERENCES Movies(Id)
 ----------------api serv
 http://localhost/shop/HappiPugService/HappiPugService/api/movieItems
 http://localhost/shop/HappiPugService/HappiPugService/api/movies/1
-
+http://happipug.azurewebsites.net/
