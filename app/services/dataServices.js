@@ -147,8 +147,8 @@ angular.module('myApp.service', [])
     //var MoviesService = "http://edarachaitanya.com/shop/HappiPugService/HappiPugService/api/movies";
     //var MovieItemsService = "http://edarachaitanya.com/shop/HappiPugService/HappiPugService/api/movieItems";
 
-    var MoviesService = "http://localhost/shop/HappiPugService/HappiPugService/api/movies";
-    var MovieItemsService = "http://localhost/shop/HappiPugService/HappiPugService/api/movieItems";
+    var MoviesService = "http://happipug.azurewebsites.net/api/movies";
+    var MovieItemsService = "http://happipug.azurewebsites.net/api/movieItems";
 
     var adminShoppifyURL = "https://gayamstore.myshopify.com/admin/products/";
 

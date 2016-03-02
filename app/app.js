@@ -62,11 +62,11 @@ config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$sceDelegatePr
 .run(['$http', '$window', '$location', function ($http, $window, $location) {
     var login = 'gayam_raja@yahoo.co.in';
     var password = 'azsxdc';
-    $http.defaults.headers.common['Authorization'] = 'Basic ' + login + ':' + password;
+   // $http.defaults.headers.common['Authorization'] = 'Basic ' + login + ':' + password;
     //$http.defaults.headers.common['Access-Control-Allow-Methods'] = 'POST, GET, OPTIONS, PUT';
     //$http.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
     //$http.defaults.headers.common['Access-Control-Allow-Credentials'] = true;
-    //$http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept';
+   // $http.defaults.headers.common['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization';
     //res.header("Access-Control-Allow-Origin", "*");
     //res.header("Access-Control-Allow-Headers", "X-Requested-With");
     $window.onload = RedirNonHttps();
