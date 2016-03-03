@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Web;
 using System.Web.Http;
 using System.Web.Script.Serialization;
 
@@ -15,10 +16,12 @@ namespace HappiPugService.Controllers
     public class TokenController : ApiController
     {
 
-			public dynamic Get()
+			public string Get()
 			{
 				// certificate
-				var certificate = new X509Certificate2("HappiePug-bbca6989906d.p12", "notasecret", X509KeyStorageFlags.MachineKeySet);
+					var certificate = new X509Certificate2(HttpContext.Current.Server.MapPath("~/Controllers/HappiePug-3c5325296563.p12"), "notasecret");
+
+			//	var certificate = new X509Certificate2(@"D:\raja\HappiPugService\HappiPugService\Controllers\HappiePug-3c5325296563.p12", "notasecret");
 
 				// header
 				var header = new { typ = "JWT", alg = "RS256" };
@@ -29,6 +32,7 @@ namespace HappiPugService.Controllers
 				{
 					iss = "happiepug@inlaid-backbone-120410.iam.gserviceaccount.com",
 					scope = "https://www.googleapis.com/auth/prediction",
+					//scope = "https://www.googleapis.com/auth/devstorage.readonly",
 					aud = "https://www.googleapis.com/oauth2/v4/token",
 					iat = times[0],
 					exp = times[1],
@@ -77,9 +81,14 @@ namespace HappiPugService.Controllers
 
 				var result = ser.Deserialize<dynamic>(response);
 
-				return result;
+				return "chaitanya";
 			}
 
+	    public string Get(int a)
+	    {
+		    return "chaitanya";
+
+	    }
 			private static int[] GetExpiryAndIssueDate()
 			{
 				var utc0 = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
