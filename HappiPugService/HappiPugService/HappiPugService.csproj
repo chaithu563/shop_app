@@ -177,6 +177,7 @@
     </Content>
     <Content Include="cert\HappiePug-bbca6989906d.p12" />
     <Content Include="Controllers\HappiePug-3c5325296563.p12" />
+    <None Include="Properties\PublishProfiles\happipug %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\happipug.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />

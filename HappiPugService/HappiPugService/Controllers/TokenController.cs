@@ -19,18 +19,24 @@ namespace HappiPugService.Controllers
 
 			public dynamic Get()
 			{
-				var result = "";
+				
+                //string pathToPrivateKey = "";
+                //string variable="";
 				// certificate
 				try
 				{
-					string privateKeyCert = "HappiePug-3c5325296563.p12";
-					string appRoot = Environment.GetEnvironmentVariable("RoleRoot");
-					string pathToPrivateKey = Path.Combine(appRoot + @"\", string.Format(@"approot\{0}", privateKeyCert));
+                    // variable = Environment.GetEnvironmentVariable("HOME").ToString();
 
-					var certificate = new X509Certificate2(pathToPrivateKey, "notasecret");
-					//	var certificate = new X509Certificate2(HttpContext.Current.Server.MapPath("~/Controllers/HappiePug-3c5325296563.p12"), "notasecret");
 
-					//	var certificate = new X509Certificate2(@"D:\raja\HappiPugService\HappiPugService\Controllers\HappiePug-3c5325296563.p12", "notasecret");
+                    //string privateKeyCert = "HappiePug-3c5325296563.p12";
+                    //string appRoot = Environment.GetEnvironmentVariable("RoleRoot");
+                    //pathToPrivateKey = Path.Combine(variable + @"\", string.Format(@"\happipug.scm.azurewebsites.net\\wwwroot\\{0}", privateKeyCert));
+
+                    // var certificate = new X509Certificate2(@"D:\home\site\wwwroot\Controllers\HappiePug-3c5325296563.p12", "notasecret");
+                    var certificate = new X509Certificate2(@"D:\local\VirtualDirectory0\site\wwwroot\Controllers\HappiePug-3c5325296563.p12", "notasecret");
+                   // var certificate = new X509Certificate2(System.Web.Hosting.HostingEnvironment.MapPath("~//Controllers/HappiePug-3c5325296563.p12"), "notasecret");
+
+                   // var certificate = new X509Certificate2(@"C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\Controllers\HappiePug-3c5325296563.p12", "notasecret");
 
 					// header
 					var header = new {typ = "JWT", alg = "RS256"};
@@ -88,15 +94,16 @@ namespace HappiPugService.Controllers
 
 					string response = Encoding.UTF8.GetString(client.UploadValues(uri, "POST", content));
 
-					 result = ser.Deserialize<dynamic>(response);
+					var result = ser.Deserialize<dynamic>(response);
+                    return result;
 				}
 				catch(Exception ex)
 				{
-					result = ex.ToString();
-					return ex;
+                   // result = ex.;
+                    return ex.ToString() ;
 				}
 
-				return result;
+				//return result;
 			}
 
 	    public string Get(int a)

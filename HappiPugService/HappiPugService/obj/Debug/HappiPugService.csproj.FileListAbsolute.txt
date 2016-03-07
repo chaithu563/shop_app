@@ -49,7 +49,6 @@ C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\bin\System.Web.WebPages.Razor.xml
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.dll
 C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.pdb
-C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.csprojResolveAssemblyReference.cache
 D:\raja\HappiPugService\HappiPugService\bin\HappiPugService.dll.config
 D:\raja\HappiPugService\HappiPugService\bin\HappiPugService.dll
 D:\raja\HappiPugService\HappiPugService\bin\HappiPugService.pdb
@@ -84,3 +83,4 @@ D:\raja\HappiPugService\HappiPugService\bin\System.Web.WebPages.Razor.xml
 D:\raja\HappiPugService\HappiPugService\obj\Debug\HappiPugService.csprojResolveAssemblyReference.cache
 D:\raja\HappiPugService\HappiPugService\obj\Debug\HappiPugService.dll
 D:\raja\HappiPugService\HappiPugService\obj\Debug\HappiPugService.pdb
+C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\obj\Debug\HappiPugService.csprojResolveAssemblyReference.cache
