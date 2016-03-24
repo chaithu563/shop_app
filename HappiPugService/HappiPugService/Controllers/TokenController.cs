@@ -33,8 +33,8 @@ namespace HappiPugService.Controllers
                     //pathToPrivateKey = Path.Combine(variable + @"\", string.Format(@"\happipug.scm.azurewebsites.net\\wwwroot\\{0}", privateKeyCert));
 
                     // var certificate = new X509Certificate2(@"D:\home\site\wwwroot\Controllers\HappiePug-3c5325296563.p12", "notasecret");
-                    var certificate = new X509Certificate2(@"D:\local\VirtualDirectory0\site\wwwroot\Controllers\HappiePug-3c5325296563.p12", "notasecret");
-                   // var certificate = new X509Certificate2(System.Web.Hosting.HostingEnvironment.MapPath("~//Controllers/HappiePug-3c5325296563.p12"), "notasecret");
+                   // var certificate = new X509Certificate2(@"D:\local\VirtualDirectory0\site\wwwroot\Controllers\HappiePug-3c5325296563.p12", "notasecret");
+                    var certificate = new X509Certificate2(System.Web.Hosting.HostingEnvironment.MapPath("~//Controllers/HappiePug-3c5325296563.p12"), "notasecret");
 
                    // var certificate = new X509Certificate2(@"C:\chaitanya\raja\myshop\shop_app\HappiPugService\HappiPugService\Controllers\HappiePug-3c5325296563.p12", "notasecret");
 
